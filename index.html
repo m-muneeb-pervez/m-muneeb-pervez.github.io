@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Muneeb Pervez | Security and privacy research</title>
+    <meta
+      name="description"
+      content="Muneeb Pervez is a Computer Science undergraduate at LUMS working on LLM agent security, empirical and usable security, and privacy. Applying to PhD programs for Fall 2027."
+    />
+    <meta name="author" content="Muneeb Pervez" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Muneeb Pervez" />
+    <meta
+      property="og:description"
+      content="Computer Science undergraduate at LUMS. LLM agent security, empirical and usable security, privacy."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muneeb Pervez",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Lahore University of Management Sciences"
+        },
+        "sameAs": [
+          "https://github.com/m-muneeb-pervez",
+          "https://www.linkedin.com/in/muneeb-pervez"
+        ]
+      }
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="page">
+      <header class="side">
+        <p class="name"><a href="#top"><span>Muneeb</span> <span>Pervez</span></a></p>
+        <p class="role">Computer Science, LUMS<br />Lahore, Pakistan</p>
+
+        <nav class="toc" aria-label="Sections">
+          <ol>
+            <li><a href="#about"><span class="num">1</span>About</a></li>
+            <li><a href="#research"><span class="num">2</span>Research</a></li>
+            <li><a href="#publications"><span class="num">3</span>Publications</a></li>
+            <li><a href="#experience"><span class="num">4</span>Experience</a></li>
+            <li><a href="#teaching"><span class="num">5</span>Teaching</a></li>
+            <li><a href="#projects"><span class="num">6</span>Projects</a></li>
+            <li><a href="#background"><span class="num">7</span>Background</a></li>
+          </ol>
+        </nav>
+
+        <ul class="elsewhere">
+          <li data-cv><a class="cv-link" href="Muneeb_Pervez_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+          <li><a href="mailto:m.muneeb.pervez@gmail.com">Email</a></li>
+          <li><a href="https://github.com/m-muneeb-pervez" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/muneeb-pervez" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </header>
+
+      <main id="main">
+        <section id="about">
+          <h2>About</h2>
+          <p class="lead">
+            I am a Computer Science undergraduate at LUMS (class of 2027) and a research assistant in two labs. At the
+            Internet Security and Privacy Lab (ISPL), supervised by Dr Fareed Zaffar, I study how apps exploit users
+            with limited literacy <a class="cite" href="#pub-1">[1]</a>. At the Distributed and AI Systems (DAIS) Lab,
+            supervised by Dr Zafar Ayyub Qazi, I study how multi-agent LLM systems fail under adversarial manipulation
+            <a class="cite" href="#pub-3">[3]</a> and how language models can detect misleading online content
+            <a class="cite" href="#pub-2">[2]</a>.
+          </p>
+          <p>
+            I am applying to PhD programs for Fall 2027. I am looking for a group where I can keep working on the
+            security of LLM agents and on empirical, user-centered security and privacy.
+          </p>
+          <p class="now">
+            <span class="label">Now</span>
+            Extending safeMAS to internal threats, and serving as a teaching assistant for Applied Cryptography
+            (CS5803) and Fundamentals of Computer Systems (CS225).
+          </p>
+        </section>
+
+        <section id="research">
+          <h2>Research</h2>
+          <div class="theme">
+            <h3>LLM agent security</h3>
+            <p>
+              Splitting a task across several agents changes where an attacker can strike. With safeMAS
+              <a class="cite" href="#pub-3">[3]</a>, I evaluate multi-agent LLM systems under adversarial manipulation
+              across several architectures. Attack success depends on which agent is compromised, and attacks can also
+              target the channels between agents. I am now studying internal threats, where an agent given a legitimate
+              task and no external attacker reasons its way into a harmful, unsanctioned action. I want to know whether
+              multi-agent architectures and tool partitioning change how often this happens and how much damage it
+              causes.
+            </p>
+          </div>
+          <div class="theme">
+            <h3>Empirical and usable security</h3>
+            <p>
+              Much of my work is empirical. In <a class="cite" href="#pub-1">[1]</a>, we paired the analysis of 50 apps
+              with a user study. In <a class="cite" href="#pub-2">[2]</a>, we benchmarked four frontier LLMs and two
+              open-weight vision-language models on 2,843 videos from eight countries.
+            </p>
+          </div>
+          <div class="theme">
+            <h3>Privacy</h3>
+            <p>
+              In <a class="cite" href="#pub-1">[1]</a>, 85% of participants did not understand basic app permissions,
+              and the apps we studied exploit populations with limited literacy. We evaluated LLM-generated summaries,
+              translations, and visual cues as privacy-literacy interventions that could scale.
+            </p>
+          </div>
+          <div class="theme">
+            <h3>Systems security</h3>
+            <p>
+              Coursework and projects in vulnerability analysis gave me a base in low-level security: building stack
+              layouts and shellcode for buffer overflows, mapping control-flow hijack points in compiled binaries with
+              GDB, and writing a parser that builds abstract syntax trees. I see this as groundwork for automated
+              vulnerability detection and program analysis.
+            </p>
+          </div>
+        </section>
+
+        <section id="publications">
+          <h2>Publications</h2>
+
+          <h3 class="group">Accepted</h3>
+
+          <article class="pub" id="pub-1">
+            <span class="ref">[1]</span>
+            <div>
+              <h4>(Mis-)Informed Consent: Predatory Apps and the Exploitation of Populations with Limited Literacy</h4>
+              <p class="authors">
+                <strong>Muhammad Muneeb Pervez</strong>, Muhammad Qasim Atiq Ullah, Ibrahim Ahmed Khan, Roshnik Rahat,
+                Muhammad Fareed Zaffar, Rashid Tahir, Talal Rahwan, Yasir Zaki.
+              </p>
+              <p class="venue"><em>The Web Conference 2026</em></p>
+              <p>
+                A study of 50 predatory loan, gambling, and trading apps that combines static application analysis,
+                privacy-disclosure auditing, and a targeted user study. 85% of participants did not understand basic app
+                permissions.
+              </p>
+              <p class="links">
+                <a href="https://doi.org/10.1145/3774904.3792969" target="_blank" rel="noopener">doi:10.1145/3774904.3792969</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub" id="pub-2">
+            <span class="ref">[2]</span>
+            <div>
+              <h4>Separating Clicks from Baits: Using Large Language Models to Detect Misleading YouTube Thumbnails</h4>
+              <p class="authors">
+                Wajiha Naveed, <strong>Muhammad Muneeb Pervez</strong>, Zaeem Mohtashim Khan, Zafar Ayyub Qazi, Zartash
+                Afzal Uzmi.
+              </p>
+              <p class="venue"><em>AAAI ICWSM 2027</em></p>
+              <p>
+                A cross-cultural study of 2,843 YouTube videos from eight countries. A multimodal LLM pipeline reads
+                thumbnails, video descriptions, and subtitle transcripts to flag misleading thumbnails. The strongest
+                configuration reached 93.8% accuracy.
+              </p>
+              <p class="links">
+                <a href="https://arxiv.org/abs/2607.23739" target="_blank" rel="noopener">arXiv:2607.23739</a>
+              </p>
+            </div>
+          </article>
+
+          <h3 class="group">Under review</h3>
+
+          <article class="pub" id="pub-3">
+            <span class="ref">[3]</span>
+            <div>
+              <h4>safeMAS</h4>
+              <p class="authors">
+                A multi-layer security framework for evaluating the robustness and safety of multi-agent LLM systems
+                against adversarial manipulation across multiple architectures.
+              </p>
+              <p class="venue"><em>ICLR 2027</em></p>
+              <p>
+                Key failure modes include positional vulnerability, where attack success depends on which agent is
+                compromised, and agent-in-the-middle attacks on the channels between agents.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Research Assistant, Distributed and AI Systems (DAIS) Lab</h3>
+              <p class="when">March 2026 to present</p>
+            </div>
+            <p class="sub">LUMS. Supervisor: Dr Zafar Ayyub Qazi</p>
+            <ul>
+              <li>
+                Built safeMAS <a class="cite" href="#pub-3">[3]</a> and am extending it to internal threats, where no
+                external attacker is present.
+              </li>
+              <li>
+                Co-authored the cross-cultural study of misleading YouTube thumbnails
+                <a class="cite" href="#pub-2">[2]</a>, accepted at AAAI ICWSM 2027.
+              </li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Research Assistant, Internet Security and Privacy Lab (ISPL)</h3>
+              <p class="when">June 2025 to present</p>
+            </div>
+            <p class="sub">LUMS. Supervisor: Dr Fareed Zaffar</p>
+            <ul>
+              <li>
+                Co-authored the peer-reviewed study of predatory apps <a class="cite" href="#pub-1">[1]</a>, accepted
+                at The Web Conference 2026.
+              </li>
+              <li>
+                Evaluated LLM-generated summaries, translations, and visual cues as scalable privacy-literacy
+                interventions.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="teaching">
+          <h2>Teaching</h2>
+          <p class="sub">Teaching assistant at LUMS, 2025 to present.</p>
+          <dl class="rows">
+            <dt>Fall 2026</dt>
+            <dd>Teaching Assistant, CS5803 Applied Cryptography</dd>
+            <dt>Fall 2026</dt>
+            <dd>Teaching Assistant, CS225 Fundamentals of Computer Systems</dd>
+            <dt>Summer 2026</dt>
+            <dd>Teaching Assistant, CS100 Computational Problem Solving</dd>
+            <dt>Spring 2026</dt>
+            <dd>
+              Head Teaching Assistant, CS100 Computational Problem Solving. Led a team of 12 TAs, overseeing
+              recruitment, scheduling, and grading standards for a cohort of 250 students.
+            </dd>
+            <dt>Spring 2026</dt>
+            <dd>Teaching Assistant, CS382 Network-Centric Computing</dd>
+            <dt>Summer 2025</dt>
+            <dd>Teaching Assistant, CS100 Computational Problem Solving</dd>
+          </dl>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Software Vulnerability Detection and Exploitation</h3>
+              <p class="when">Fall 2025</p>
+            </div>
+            <p class="sub">C, x86 Assembly, GDB, Python</p>
+            <p>
+              Static and dynamic analysis of memory safety vulnerabilities. I constructed stack layouts, developed
+              shellcode, and used NOP sled techniques to exploit stack-based buffer overflows reliably. I then used GDB
+              to map memory regions, find control-flow hijack points, and validate that the exploits were reliable.
+            </p>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Web Application Security Analysis</h3>
+              <p class="when">Spring 2026</p>
+            </div>
+            <p class="sub">Python, BurpSuite, FastAPI</p>
+            <p>
+              Identified and exploited CSRF and stored and reflected XSS through systematic input validation testing
+              and HTTP request interception, then implemented defenses: CSRF tokens, input sanitization, and CSP
+              headers. Also bypassed authentication and access control through session token manipulation and OAuth 2.0
+              flow abuse, which gave me experience with both offensive testing and defensive hardening.
+            </p>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Bison Parser with AST Construction</h3>
+              <p class="when">Fall 2025</p>
+            </div>
+            <p class="sub">C, Flex, Bison</p>
+            <p>
+              A complete parser for a C-like language that builds and traverses abstract syntax trees. It supports unary
+              expressions, increment and decrement operators, else-if chaining, array declarations, and for-loop
+              variable declarations. The work covered formal grammar specification, shift-reduce conflict resolution,
+              and memory-safe AST management.
+            </p>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Distributed Hash Table</h3>
+              <p class="when">May 2025</p>
+            </div>
+            <p class="sub">Python, sockets, threading</p>
+            <p>
+              A Chord-like DHT with consistent hashing, providing decentralized key-value storage and fault-tolerant key
+              lookup across dynamic peer-to-peer nodes.
+            </p>
+          </article>
+        </section>
+
+        <section id="background">
+          <h2>Background</h2>
+          <dl class="facts">
+            <dt>Education</dt>
+            <dd>
+              B.S. in Computer Science, Lahore University of Management Sciences (LUMS), 2023 to 2027. Dean&rsquo;s Honor
+              List in 2023-24 and 2024-25.
+            </dd>
+
+            <dt>Earlier</dt>
+            <dd>
+              Full Merit Scholarship in A Levels at Lahore Grammar School Johar Town. A Levels High Achiever (3 As) and
+              O Levels High Achiever (9 A*s).
+            </dd>
+
+            <dt>Coursework</dt>
+            <dd>
+              Topics in Network Security, Network Security, Applied Cryptography, Compiler Design, Distributed Systems,
+              Network-Centric Computing, Operating Systems, Big Data Analytics, AI and Machine Learning.
+            </dd>
+
+            <dt>Programming</dt>
+            <dd>Python, C++, C, x86 Assembly, MATLAB.</dd>
+
+            <dt>Security tools</dt>
+            <dd>
+              GDB, BurpSuite, Wireshark. Static binary analysis, dynamic instrumentation, exploit development, API and
+              system call tracing.
+            </dd>
+
+            <dt>Tooling</dt>
+            <dd>
+              Linux (Fedora, KDE Plasma), Docker, Git, VSCode, Google Cloud Platform, socket programming, TCP/IP,
+              threading.
+            </dd>
+
+            <dt>Certificates</dt>
+            <dd>
+              Cybersecurity Professional Certificate (Google). Introduction to Cybersecurity (Cisco). Fundamentals of
+              Deep Learning (Nvidia). Advanced Deep Learning Techniques for Computer Vision and Deep Learning for Object
+              Detection (MathWorks). Getting Started with Go on Google Cloud (Google). Teaching Assistant Professional
+              Development Course (LUMS).
+            </dd>
+          </dl>
+        </section>
+
+        <footer class="foot">
+          <p>
+            Email is the best way to reach me:
+            <a href="mailto:m.muneeb.pervez@gmail.com">m.muneeb.pervez@gmail.com</a>.<span data-cv> My
+            <a href="Muneeb_Pervez_CV.pdf" target="_blank" rel="noopener">CV</a> has the full details.</span>
+          </p>
+          <p class="fine">Last updated {{BUILT_ON}}.</p>
+          <p class="fine" id="analytics-note" hidden></p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
