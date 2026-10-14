@@ -2,6 +2,7 @@ node_modules
 dist
 .env.local
 .env.*.local
-# Keep stray PDFs in the project root (like the original CV) out of the repo.
+# Keep stray PDFs and LaTeX sources in the project root (CV drafts) out of the repo.
 # The CV served by the site is public/Muneeb_Pervez_CV.pdf.
 /*.pdf
+/*.tex
