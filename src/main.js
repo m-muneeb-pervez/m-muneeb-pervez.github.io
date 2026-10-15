@@ -1,5 +1,5 @@
-import '@fontsource-variable/ibm-plex-sans/wght.css'
-import '@fontsource-variable/ibm-plex-sans/wght-italic.css'
+import '@fontsource-variable/lora/wght.css'
+import '@fontsource-variable/lora/wght-italic.css'
 import './style.css'
 import { initAnalytics } from './analytics.js'
 
