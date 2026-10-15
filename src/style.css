@@ -326,6 +326,10 @@ li::marker {
   color: var(--accent);
 }
 
+li > ul {
+  margin-top: 0.3rem;
+}
+
 /* Research themes */
 
 .theme {
