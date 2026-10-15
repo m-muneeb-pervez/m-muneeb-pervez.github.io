@@ -6,3 +6,6 @@ dist
 # The CV served by the site is public/Muneeb_Pervez_CV.pdf.
 /*.pdf
 /*.tex
+# Original photos in the project root; the site uses the processed public/muneeb.jpg.
+/*.jpg
+/*.jpeg

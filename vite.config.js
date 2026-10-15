@@ -2,7 +2,16 @@ import { existsSync } from 'node:fs'
 import { defineConfig } from 'vite'
 
 const builtOn = new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
-const hasCv = existsSync(new URL('./public/Muneeb_Pervez_CV.pdf', import.meta.url))
+const has = (file) => existsSync(new URL(`./public/${file}`, import.meta.url))
+
+// Elements marked with an attribute (data-cv, data-photo) are kept only when the
+// matching file exists in public/, so the site never links to a missing file.
+function keepIf(html, attr, keep) {
+  if (keep) return html.replace(new RegExp(` ${attr}(?=[\\s>])`, 'g'), '')
+  return html
+    .replace(new RegExp(`<(li|span|figure)\\b[^>]*\\b${attr}\\b[^>]*>[\\s\\S]*?<\\/\\1>`, 'g'), '')
+    .replace(new RegExp(`<meta\\b[^>]*\\b${attr}\\b[^>]*>\\s*`, 'g'), '')
+}
 
 export default defineConfig({
   // Relative base so the build works from a domain root or a subpath (GitHub Pages).
@@ -11,12 +20,9 @@ export default defineConfig({
     {
       name: 'site-html',
       transformIndexHtml(html) {
-        // Elements marked data-cv are kept only when public/Muneeb_Pervez_CV.pdf exists,
-        // so the site never links to a missing file.
-        const withCv = hasCv
-          ? html.replace(/ data-cv(?=[\s>])/g, '')
-          : html.replace(/<(li|span)\b[^>]*\bdata-cv\b[^>]*>[\s\S]*?<\/\1>/g, '')
-        return withCv.replaceAll('{{BUILT_ON}}', builtOn)
+        let out = keepIf(html, 'data-cv', has('Muneeb_Pervez_CV.pdf'))
+        out = keepIf(out, 'data-photo', has('muneeb.jpg'))
+        return out.replaceAll('{{BUILT_ON}}', builtOn)
       },
     },
   ],

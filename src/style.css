@@ -3,24 +3,23 @@
   --ink: #1c1b19;
   --muted: #6a655b;
   --rule: #d9d3c5;
-  --accent: #9a3b26;
-  --wash: rgb(154 59 38 / 0.1);
+  --accent: #0c6a72;
+  --wash: rgb(12 106 114 / 0.1);
   --serif: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
   --rail: 13.5rem;
   --measure: 40rem;
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #161513;
-    --ink: #e9e5db;
-    --muted: #a39d90;
-    --rule: #38352f;
-    --accent: #e39274;
-    --wash: rgb(227 146 116 / 0.14);
-    color-scheme: dark;
-  }
+/* Light is the default. Dark is opt-in through the toggle (see main.js). */
+:root[data-theme='dark'] {
+  --bg: #161513;
+  --ink: #e9e5db;
+  --muted: #a39d90;
+  --rule: #38352f;
+  --accent: #6cc7c4;
+  --wash: rgb(108 199 196 / 0.14);
+  color-scheme: dark;
 }
 
 *,
@@ -114,14 +113,48 @@ a:focus-visible {
   flex-direction: column;
   max-height: 100dvh;
   overflow-y: auto;
-  padding: 4.5rem 0 2.5rem;
+  padding: 3.5rem 0 1.75rem;
+}
+
+/* When the rail is taller than the window it scrolls with the page instead of getting its own
+   scrollbar. Heights: about 47.5rem without the photo, 56rem with it. */
+@media (min-width: 52rem) and (max-height: 47.5rem) {
+  .side {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media (min-width: 52rem) and (max-height: 56rem) {
+  .side:has(.portrait) {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
 }
 
 main {
-  padding: 4.5rem 0 5rem;
+  padding: 3.5rem 0 5rem;
 }
 
 /* Side rail */
+
+.portrait {
+  margin: 0 0 1.25rem;
+  width: 6.5rem;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  outline: 1px solid var(--rule);
+  outline-offset: 3px;
+}
 
 .name {
   margin: 0;
@@ -144,14 +177,14 @@ main {
 }
 
 .role {
-  margin: 1.1rem 0 0;
+  margin: 0.9rem 0 0;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.45;
 }
 
 .toc {
-  margin-top: 2.75rem;
+  margin-top: 2rem;
 }
 
 .toc ol {
@@ -163,7 +196,7 @@ main {
 .toc a {
   display: flex;
   gap: 0.8rem;
-  padding: 0.18rem 0;
+  padding: 0.12rem 0;
   color: var(--muted);
   font-size: 0.97rem;
   text-decoration: none;
@@ -188,11 +221,12 @@ main {
 .elsewhere {
   list-style: none;
   margin: auto 0 0;
-  padding: 2.5rem 0 0;
+  padding: 1.75rem 0 0;
   font-size: 0.97rem;
 }
 
 .elsewhere li {
+  margin: 0;
   padding: 0.1rem 0;
 }
 
@@ -201,10 +235,75 @@ main {
   font-weight: 560;
 }
 
+/* Dark mode switch */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.switch {
+  position: relative;
+  flex: none;
+  width: 2rem;
+  height: 1.1rem;
+  border: 1px solid var(--muted);
+  border-radius: 999px;
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(1.1rem - 6px);
+  height: calc(1.1rem - 6px);
+  border-radius: 50%;
+  background: var(--muted);
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.theme-toggle[aria-pressed='true'] .switch {
+  border-color: var(--accent);
+}
+
+.theme-toggle[aria-pressed='true'] .switch::after {
+  transform: translateX(0.9rem);
+  background: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switch::after {
+    transition: none;
+  }
+}
+
 /* Sections */
 
 main section {
-  padding-top: 3.75rem;
+  padding-top: 3.5rem;
 }
 
 main section:first-of-type {
@@ -216,7 +315,7 @@ main section > :last-child {
 }
 
 h2 {
-  margin: 0 0 1.6rem;
+  margin: 0 0 1.5rem;
   padding-top: 0.95rem;
   border-top: 1px solid var(--rule);
   color: var(--muted);
@@ -253,14 +352,8 @@ p {
   text-decoration: underline;
 }
 
-.now {
-  margin-top: 1.75rem;
-  color: var(--muted);
-  font-size: 0.97rem;
-}
-
 .label {
-  margin-right: 0.6rem;
+  display: block;
   color: var(--accent);
   font-size: 0.74rem;
   font-weight: 600;
@@ -268,17 +361,35 @@ p {
   text-transform: uppercase;
 }
 
+/* Bullets */
+
+ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+/* Research themes */
+
 .theme {
-  margin-bottom: 1.7rem;
+  margin-bottom: 1.8rem;
 }
 
 .theme h3 {
-  margin-bottom: 0.2rem;
-  font-size: 1.02rem;
+  margin-bottom: 0.35rem;
+  font-size: 1.05rem;
 }
 
-.theme p {
-  margin: 0;
+.theme.aside h3 {
+  color: var(--muted);
+  font-weight: 500;
 }
 
 /* Publications */
@@ -298,7 +409,7 @@ p {
 .pub {
   display: grid;
   grid-template-columns: 2.5rem minmax(0, 1fr);
-  margin-bottom: 2.1rem;
+  margin-bottom: 2.4rem;
   scroll-margin-top: 2rem;
 }
 
@@ -307,35 +418,48 @@ p {
   font-variant-numeric: tabular-nums;
 }
 
+.venue {
+  margin: 0 0 0.25rem;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
 .pub h4 {
-  font-size: 1.1rem;
+  font-size: 1.12rem;
   line-height: 1.35;
   margin-bottom: 0.4rem;
 }
 
-.authors {
-  margin: 0 0 0.15rem;
+.byline {
+  margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
-.authors strong {
+.byline strong {
   color: var(--ink);
   font-weight: 600;
 }
 
-.venue {
-  margin: 0 0 0.55rem;
-  font-size: 0.97rem;
+.finding {
+  margin: 0.85rem 0;
+  padding: 0.15rem 0 0.15rem 0.9rem;
+  border-left: 2px solid var(--accent);
+  font-size: 1.04rem;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
-.pub p:not(.authors):not(.venue):not(.links) {
-  margin-bottom: 0.4rem;
+.finding .label {
+  margin-bottom: 0.1rem;
 }
 
 .links {
-  margin: 0;
+  margin: 0.65rem 0 0;
   font-size: 0.92rem;
 }
 
@@ -382,27 +506,10 @@ p {
 }
 
 .sub {
-  margin: 0.1rem 0 0.65rem;
+  margin: 0.1rem 0 0.6rem;
   color: var(--muted);
   font-size: 0.95rem;
   font-style: italic;
-}
-
-.entry p:last-child {
-  margin-bottom: 0;
-}
-
-ul {
-  margin: 0;
-  padding-left: 1.15rem;
-}
-
-li {
-  margin-bottom: 0.4rem;
-}
-
-li::marker {
-  color: var(--rule);
 }
 
 /* Teaching and background lists */
@@ -411,7 +518,7 @@ li::marker {
 .facts {
   display: grid;
   margin: 0;
-  row-gap: 0.55rem;
+  row-gap: 0.7rem;
 }
 
 .rows {
@@ -420,7 +527,7 @@ li::marker {
 
 .facts {
   grid-template-columns: 10rem minmax(0, 1fr);
-  row-gap: 1rem;
+  row-gap: 1.1rem;
 }
 
 .rows dt {
@@ -443,8 +550,39 @@ li::marker {
   margin: 0;
 }
 
+.rows li:last-child,
+.facts li:last-child {
+  margin-bottom: 0;
+}
+
 main section > .sub {
   margin: -0.5rem 0 1.2rem;
+}
+
+.cols {
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.cols li {
+  break-inside: avoid;
+}
+
+summary {
+  color: var(--muted);
+  cursor: pointer;
+}
+
+summary:hover {
+  color: var(--accent);
+}
+
+summary::marker {
+  color: var(--accent);
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -473,10 +611,17 @@ main section > .sub {
   }
 
   .side {
+    display: block;
     position: static;
     max-height: none;
     overflow: visible;
     padding: 2.75rem 0 0;
+  }
+
+  .portrait {
+    float: left;
+    width: 5.5rem;
+    margin: 0 1.25rem 0.5rem 0;
   }
 
   .name {
@@ -489,9 +634,11 @@ main section > .sub {
 
   .role {
     margin-top: 0.7rem;
+    overflow: hidden; /* keeps both lines beside the floated photo */
   }
 
   .toc {
+    clear: both;
     margin-top: 1.6rem;
   }
 
@@ -510,6 +657,10 @@ main section > .sub {
     margin: 1.1rem 0 0;
     padding: 1.1rem 0 0;
     border-top: 1px solid var(--rule);
+  }
+
+  .theme-toggle {
+    margin-top: 0.9rem;
   }
 
   main {
@@ -540,21 +691,28 @@ main section > .sub {
   .facts dd {
     margin-bottom: 1rem;
   }
+
+  .cols {
+    columns: 1;
+  }
 }
 
-/* Print: a plain, single column page */
+/* Print: a plain, single column page, always light */
 
 @media print {
-  :root {
+  :root,
+  :root[data-theme='dark'] {
     --bg: #fff;
     --ink: #000;
     --muted: #444;
     --rule: #bbb;
     --accent: #000;
+    color-scheme: light;
   }
 
   .skip,
   .toc,
+  .theme-toggle,
   #analytics-note {
     display: none;
   }
@@ -569,6 +727,10 @@ main section > .sub {
     position: static;
     max-height: none;
     padding: 0 0 1rem;
+  }
+
+  .portrait {
+    width: 4.5rem;
   }
 
   .name span {
