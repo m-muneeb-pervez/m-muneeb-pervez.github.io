@@ -3,9 +3,9 @@
   --ink: #1c1b19;
   --muted: #6a655b;
   --rule: #d9d3c5;
-  --accent: #0c6a72;
-  --wash: rgb(12 106 114 / 0.1);
-  --serif: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
+  --accent: #9a3b26;
+  --wash: rgb(154 59 38 / 0.1);
+  --sans: 'IBM Plex Sans Variable', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --rail: 13.5rem;
   --gap: clamp(2rem, 5vw, 4.5rem);
   color-scheme: light;
@@ -17,8 +17,8 @@
   --ink: #e9e5db;
   --muted: #a39d90;
   --rule: #38352f;
-  --accent: #6cc7c4;
-  --wash: rgb(108 199 196 / 0.14);
+  --accent: #e39274;
+  --wash: rgb(227 146 116 / 0.14);
   color-scheme: dark;
 }
 
@@ -29,13 +29,13 @@
 }
 
 html {
-  font-size: 106.25%;
+  font-size: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 @media (min-width: 52rem) {
   html {
-    font-size: 112.5%;
+    font-size: 106.25%;
   }
 }
 
@@ -49,9 +49,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-optical-sizing: auto;
-  line-height: 1.62;
+  line-height: 1.6;
   text-wrap: pretty;
   -webkit-font-smoothing: antialiased;
 }
@@ -123,10 +123,10 @@ a:focus-visible {
 
 .name {
   margin: 0;
-  font-size: 2.2rem;
-  line-height: 1.02;
-  font-weight: 380;
-  letter-spacing: -0.02em;
+  font-size: 2rem;
+  line-height: 1.05;
+  font-weight: 520;
+  letter-spacing: -0.03em;
   white-space: nowrap;
 }
 
@@ -271,14 +271,14 @@ h2 {
   color: var(--muted);
   font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1.2;
 }
 
 h3,
 h4 {
-  font-weight: 560;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -287,7 +287,7 @@ p {
 }
 
 .lead {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.5;
 }
 
@@ -302,12 +302,16 @@ p {
   text-decoration: underline;
 }
 
+.person {
+  white-space: nowrap;
+}
+
 .label {
   display: block;
   color: var(--accent);
   font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -377,7 +381,7 @@ li > ul {
   color: var(--accent);
   font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -495,7 +499,7 @@ li > ul {
   color: var(--muted);
   font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -588,7 +592,7 @@ details[open] summary {
   }
 
   .name {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   .role {
@@ -631,10 +635,10 @@ details[open] summary {
     margin: 0;
     padding-top: 0.15rem;
     color: var(--ink);
-    font-size: 1.45rem;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    line-height: 1.15;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
     text-transform: none;
   }
 
@@ -647,7 +651,7 @@ details[open] summary {
   }
 
   .lead {
-    font-size: 1.28rem;
+    font-size: 1.22rem;
   }
 
   .pub {
