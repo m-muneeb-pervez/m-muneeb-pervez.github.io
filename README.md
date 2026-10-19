@@ -18,17 +18,19 @@ npm run preview   # serve dist/ locally
 
 ## Analytics (GoatCounter)
 
-Visit counts use [GoatCounter](https://www.goatcounter.com): free, no cookies, no consent banner. It is off until a site code is set.
+Visit counts use [GoatCounter](https://www.goatcounter.com): free, no cookies, no consent banner.
 
-1. Create a free account and pick a site code, for example `muneeb`.
-2. Copy `.env.example` to `.env.production`, set `VITE_GOATCOUNTER_CODE=muneeb`, and rebuild. The code is public (it ships in the built JS), so committing `.env.production` is fine. On a host that builds for you (Netlify, Vercel, GitHub Actions), you can instead set `VITE_GOATCOUNTER_CODE` in the host's build environment.
+**Status: on for the live site.** The deploy workflow passes the repository variable `GOATCOUNTER_CODE` (currently `muneeb-pervez`) to the build, so every deployed build counts visits. Results are in the GoatCounter dashboard for that code.
 
-It runs only in production builds, never on localhost, and respects Do Not Track. CV opens, email clicks, and outbound links are recorded as events. A short privacy note appears in the footer when analytics are active.
+A build only includes the counter when a site code is present, so `npm run dev` and a plain local `npm run build` have it off. That is intended, and it keeps local testing out of the numbers.
+
+- Change the code or turn analytics off: edit or delete the `GOATCOUNTER_CODE` variable (Settings, Secrets and variables, Actions, Variables), then re-run the deploy workflow.
+- Test a local build with analytics: copy `.env.example` to `.env.production`, set `VITE_GOATCOUNTER_CODE`, and run `npm run build`.
+
+It never runs on localhost, and it respects Do Not Track. CV opens, email clicks, and outbound links are recorded as events. A short privacy note appears in the footer when analytics are active.
 
 ## Deploying
 
 The site is published with GitHub Pages at https://m-muneeb-pervez.github.io/. Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes `dist/`.
-
-To enable analytics on the live site without touching code, add a repository variable named `GOATCOUNTER_CODE` (Settings, Secrets and variables, Actions, Variables) and re-run the workflow.
 
 The build uses relative paths, so `dist/` also works on any other static host, at a domain root or a subpath.
