@@ -456,6 +456,12 @@ li > ul {
   font-weight: 600;
 }
 
+.framework {
+  margin: 0.55rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
 .finding {
   margin: 0.85rem 0;
   padding: 0.15rem 0 0.15rem 0.9rem;
@@ -556,6 +562,16 @@ li > ul {
   font-size: 0.95rem;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+}
+
+.org {
+  margin: 0.1rem 0 0;
+  font-size: 1rem;
+  text-wrap: balance;
+}
+
+.org + .sub {
+  margin-top: 0.05rem;
 }
 
 .sub {
