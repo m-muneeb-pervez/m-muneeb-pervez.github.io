@@ -1,13 +1,19 @@
-// Privacy-respecting visit counts via GoatCounter (no cookies, no personal data).
-// Active only in production builds, and only when VITE_GOATCOUNTER_CODE is set.
+// Privacy-friendly visit counts via Umami (no cookies, no tracking across sites).
+// Active only in production builds, never on localhost, and only when a website ID is set.
 
-const code = import.meta.env.VITE_GOATCOUNTER_CODE
+const websiteId = import.meta.env.VITE_UMAMI_WEBSITE_ID
+// Umami Cloud by default. For a self-hosted Umami, set VITE_UMAMI_SRC to its script URL.
+const src = import.meta.env.VITE_UMAMI_SRC || 'https://cloud.umami.is/script.js'
 const note = document.getElementById('analytics-note')
 
 function say(text) {
   if (!note) return
   note.textContent = text
   note.hidden = false
+}
+
+function isLocal() {
+  return /^(localhost|127\.|0\.0\.0\.0|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)|\.local$/.test(location.hostname)
 }
 
 function optedOut() {
@@ -18,36 +24,34 @@ function optedOut() {
   )
 }
 
-function count(path, title) {
-  window.goatcounter?.count?.({ path, title, event: true })
+function track(name, data) {
+  window.umami?.track?.(name, data)
 }
 
 function onClick(e) {
   const a = e.target.closest('a[href]')
   if (!a) return
   const url = new URL(a.href, location.href)
-  if (url.pathname.endsWith('.pdf')) return count('cv-open', 'CV opened')
-  if (url.protocol === 'mailto:') return count('email-click', 'Email link clicked')
-  if (url.origin !== location.origin) return count(`outbound/${url.hostname}`, `Link to ${url.hostname}`)
+  if (url.pathname.endsWith('.pdf')) return track('cv-open')
+  if (url.protocol === 'mailto:') return track('email-click')
+  if (url.origin !== location.origin) return track('outbound-link', { host: url.hostname })
 }
 
 export function initAnalytics() {
-  if (!import.meta.env.PROD || !code) return
+  if (!import.meta.env.PROD || !websiteId || isLocal()) return
 
   if (optedOut()) {
     say('Your browser asks not to be tracked, so this visit is not counted.')
     return
   }
 
-  const endpoint = `https://${code}.goatcounter.com/count`
-  window.goatcounter = { endpoint }
-
   const script = document.createElement('script')
-  script.async = true
-  script.src = 'https://gc.zgo.at/count.js'
-  script.dataset.goatcounter = endpoint
+  script.defer = true
+  script.src = src
+  script.dataset.websiteId = websiteId
+  script.dataset.doNotTrack = 'true'
   document.head.append(script)
 
   document.addEventListener('click', onClick)
-  say('Visits are counted with GoatCounter, which sets no cookies and stores no personal data.')
+  say('Visits are counted with Umami, which uses no cookies and does not follow you across sites.')
 }

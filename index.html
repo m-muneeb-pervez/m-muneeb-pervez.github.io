@@ -48,13 +48,36 @@
 
     <div class="page">
       <header class="masthead">
-        <figure class="portrait" data-photo>
-          <img src="/muneeb.jpg" alt="Portrait of Muneeb Pervez" width="480" height="480" />
-        </figure>
-
-        <div class="id">
+        <div class="who">
           <p class="name"><a href="#top">Muneeb Pervez</a></p>
           <p class="role">Computer Science, LUMS &middot; Lahore, Pakistan</p>
+        </div>
+
+        <div class="about">
+          <p class="lead">
+            I am a Computer Science undergraduate at LUMS (class of 2027). I work on the security of LLM agents and
+            multi-agent systems, with side work in usable security and privacy.
+          </p>
+          <ul>
+            <li>
+              Research assistant at the DAIS Lab with
+              <a class="person" href="https://web.lums.edu.pk/~zafar/" target="_blank" rel="noopener">Dr Zafar Ayyub Qazi</a>
+              and the ISPL with
+              <a class="person" href="https://www.lums.edu.pk/lums_employee/422" target="_blank" rel="noopener">Dr Fareed Zaffar</a>
+            </li>
+            <li>
+              Now: extending safeMAS, the framework we built to test multi-agent LLM systems
+              <a class="cite" href="#pub-3">[3]</a>, to internal threats: no outside attacker, just an agent that
+              reasons its way into a harmful action no one authorized
+            </li>
+            <li>Applying to PhD programs for Fall 2027</li>
+          </ul>
+        </div>
+
+        <div class="aside">
+          <figure class="portrait" data-photo>
+            <img src="/muneeb.jpg" alt="Portrait of Muneeb Pervez" width="480" height="480" />
+          </figure>
 
           <ul class="elsewhere">
             <li data-cv><a class="cv-link" href="Muneeb_Pervez_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
@@ -63,19 +86,18 @@
             <li><a href="https://www.linkedin.com/in/muneeb-pervez" target="_blank" rel="noopener">LinkedIn</a></li>
             <li><a href="https://github.com/m-muneeb-pervez" target="_blank" rel="noopener">GitHub</a></li>
           </ul>
-
-          <nav class="toc" aria-label="Sections">
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#publications">Publications</a></li>
-              <li><a href="#research">Research</a></li>
-              <li><a href="#coursework">Coursework</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#teaching">Teaching</a></li>
-              <li><a href="#background">Background</a></li>
-            </ul>
-          </nav>
         </div>
+
+        <nav class="toc" aria-label="Sections">
+          <ul>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#coursework">Coursework</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#background">Background</a></li>
+          </ul>
+        </nav>
 
         <button class="theme-toggle" type="button" aria-pressed="false">
           <span class="switch" aria-hidden="true"></span>
@@ -84,27 +106,22 @@
       </header>
 
       <main id="main">
-        <section id="about">
-          <h2>About</h2>
-          <p class="lead">
-            I am a Computer Science undergraduate at LUMS (class of 2027). I work on the security of LLM agents and
-            multi-agent systems, with side work in usable security and privacy.
-          </p>
-          <ul>
+        <section id="research">
+          <h2>Research interests</h2>
+          <ul class="interests">
             <li>
-              Research assistant at the Distributed and AI Systems (DAIS) Lab with
-              <a class="person" href="https://web.lums.edu.pk/~zafar/" target="_blank" rel="noopener">Dr Zafar Ayyub Qazi</a>
+              <strong>LLM agent security:</strong> attacks that trigger actions nobody asked for
             </li>
             <li>
-              Research assistant at the Internet Security and Privacy Lab (ISPL) with
-              <a class="person" href="https://www.lums.edu.pk/lums_employee/422" target="_blank" rel="noopener">Dr Fareed Zaffar</a>
+              <strong>Multi-agent security:</strong> how splitting tools across agents shapes risk
+              <a class="cite" href="#pub-3">[3]</a>
             </li>
-            <li>
-              Now: extending safeMAS, a security framework I built for multi-agent LLM systems
-              <a class="cite" href="#pub-3">[3]</a>, to internal threats
-            </li>
-            <li>Applying to PhD programs for Fall 2027</li>
           </ul>
+          <p class="side">
+            <span class="side-label">Side interest</span>
+            Usable security and privacy: predatory apps <a class="cite" href="#pub-1">[1]</a>, misleading content
+            <a class="cite" href="#pub-2">[2]</a>
+          </p>
         </section>
 
         <section id="publications">
@@ -124,17 +141,41 @@
               <p class="finding">
                 <span class="label">Key finding</span>85% of participants did not understand basic app permissions.
               </p>
-              <ul>
-                <li>Studied 50 predatory loan, gambling, and trading apps</li>
-                <li>Combined static application analysis, privacy-disclosure auditing, and a targeted user study</li>
-                <li>
-                  Evaluated LLM-generated summaries, translations, and visual cues as scalable privacy-literacy
-                  interventions
-                </li>
-              </ul>
               <p class="links">
                 <a href="https://doi.org/10.1145/3774904.3792969" target="_blank" rel="noopener">doi:10.1145/3774904.3792969</a>
               </p>
+              <details class="details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Studied 50 predatory loan, gambling, and trading apps</li>
+                  <li>Combined static application analysis, privacy-disclosure auditing, and a targeted user study</li>
+                  <li>
+                    Evaluated LLM-generated summaries, translations, and visual cues as scalable privacy-literacy
+                    interventions
+                  </li>
+                </ul>
+                <figure class="figure native">
+                  <a class="light" href="www-overview-light.svg" target="_blank" rel="noopener">
+                    <img
+                      src="/www-overview-light.svg"
+                      width="520"
+                      height="1044"
+                      loading="lazy"
+                      alt="Illustrated overview of the Web Conference study. Thirty-four factory workers in Lahore were interviewed, and 50 loan, gambling, and trading apps were analyzed. Thirty of the 34 had never been told how their data is protected. Each privacy policy was summarized by an LLM and turned into Urdu audio, giving Intervention 1, an audio summary, and Intervention 2, the audio plus risk visuals. Each person rated their confidence in installing a finance app, shown as faces: most were confident at baseline, more cautious after Intervention 1, and 92 to 94 percent cautious after Intervention 2. Findings: 85 percent of participants did not understand basic app permissions, and 80 percent of apps asked for more permissions than they needed."
+                    />
+                  </a>
+                  <a class="dark" href="www-overview-dark.svg" target="_blank" rel="noopener">
+                    <img
+                      src="/www-overview-dark.svg"
+                      width="520"
+                      height="1044"
+                      loading="lazy"
+                      alt="Illustrated overview of the Web Conference study. Thirty-four factory workers in Lahore were interviewed, and 50 loan, gambling, and trading apps were analyzed. Thirty of the 34 had never been told how their data is protected. Each privacy policy was summarized by an LLM and turned into Urdu audio, giving Intervention 1, an audio summary, and Intervention 2, the audio plus risk visuals. Each person rated their confidence in installing a finance app, shown as faces: most were confident at baseline, more cautious after Intervention 1, and 92 to 94 percent cautious after Intervention 2. Findings: 85 percent of participants did not understand basic app permissions, and 80 percent of apps asked for more permissions than they needed."
+                    />
+                  </a>
+                  <figcaption>Web Conference study, illustrated: who and what we studied, the two interventions, how they were tested, and the main findings. Select the figure to open it full size.</figcaption>
+                </figure>
+              </details>
             </div>
           </article>
 
@@ -151,14 +192,38 @@
                 <span class="label">Key finding</span>The strongest configuration detected misleading thumbnails with
                 93.8% accuracy.
               </p>
-              <ul>
-                <li>Cross-cultural study of 2,843 YouTube videos from eight countries</li>
-                <li>Multimodal LLM pipeline over thumbnails, video descriptions, and subtitle transcripts</li>
-                <li>Benchmarked four frontier LLMs and two open-weight vision-language models</li>
-              </ul>
               <p class="links">
                 <a href="https://arxiv.org/abs/2607.23739" target="_blank" rel="noopener">arXiv:2607.23739</a>
               </p>
+              <details class="details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Cross-cultural study of 2,843 YouTube videos from eight countries</li>
+                  <li>Multimodal LLM pipeline over thumbnails, video descriptions, and subtitle transcripts</li>
+                  <li>Benchmarked four frontier LLMs and two open-weight vision-language models</li>
+                </ul>
+                <figure class="figure">
+                  <a class="light" href="icwsm-pipeline-light.svg" target="_blank" rel="noopener">
+                    <img
+                      src="/icwsm-pipeline-light.svg"
+                      width="1100"
+                      height="400"
+                      loading="lazy"
+                      alt="Pipeline diagram. 2,843 videos from eight countries give three signals per video: the thumbnail, the subtitles, and a video description. They feed a prompt that uses zero-shot, fixed few-shot, or dynamic few-shot prompting, where two similar examples come from an example bank. An LLM, either four proprietary models or two open-weight models, predicts misleading or not misleading."
+                    />
+                  </a>
+                  <a class="dark" href="icwsm-pipeline-dark.svg" target="_blank" rel="noopener">
+                    <img
+                      src="/icwsm-pipeline-dark.svg"
+                      width="1100"
+                      height="400"
+                      loading="lazy"
+                      alt="Pipeline diagram. 2,843 videos from eight countries give three signals per video: the thumbnail, the subtitles, and a video description. They feed a prompt that uses zero-shot, fixed few-shot, or dynamic few-shot prompting, where two similar examples come from an example bank. An LLM, either four proprietary models or two open-weight models, predicts misleading or not misleading."
+                    />
+                  </a>
+                  <figcaption>How the detector works: a video's thumbnail, subtitles, and description go into one prompt, and an LLM judges whether the thumbnail is misleading. Dynamic few-shot prompting, which adds two similar examples, gave the best result. Select the figure to open it full size.</figcaption>
+                </figure>
+              </details>
             </div>
           </article>
 
@@ -168,58 +233,47 @@
             <span class="ref">[3]</span>
             <div>
               <p class="venue">ICLR 2027</p>
-              <h4>safeMAS</h4>
+              <h4>More Agents, Same Exposure: Measuring the Safety of Tool-Partitioned Agent Teams</h4>
               <p class="byline">
-                A multi-layer security framework for evaluating the robustness and safety of multi-agent LLM systems
+                Introduces safeMAS, a framework for measuring how safe multi-agent LLM systems are against attacks
               </p>
               <p class="finding">
-                <span class="label">Key finding</span>Attack success depends on which agent is compromised.
+                <span class="label">Key finding</span>Splitting tools across an orchestrated team does not make it
+                safer. A tampered message between agents succeeds in 76% of runs, more than any other attack vector.
               </p>
-              <ul>
-                <li>Evaluates robustness and safety under adversarial manipulation across multiple architectures</li>
-                <li>A second failure mode: agent-in-the-middle attacks on the channels between agents</li>
-              </ul>
+              <details class="details">
+                <summary>Details</summary>
+                <ul>
+                  <li>A measurement framework with 990 scenarios across 4 simulated domains and 240 tools, run on three models</li>
+                  <li>
+                    With attacks on the channels between agents included, 53% of attacks on orchestrated teams succeed
+                  </li>
+                  <li>Orchestrated teams make 16 to 60 times as many model calls as a single agent</li>
+                </ul>
+                <figure class="figure native">
+                  <a class="light" href="safemas-overview-light.svg" target="_blank" rel="noopener">
+                    <img
+                      src="/safemas-overview-light.svg"
+                      width="520"
+                      height="840"
+                      loading="lazy"
+                      alt="Overview of safeMAS. The same tasks run on a single agent and on four team structures: centralized, decentralized, hybrid, and independent. In a team the tools are split, so no agent can finish alone. One payload is planted per run, by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Attack success and task completion are read from the final state with no language model as judge, and model calls are counted too. Findings: a tampered message succeeds in 76 percent of runs, attacks on orchestrated teams succeed in 39 to 40 percent against 41 percent for one agent, and orchestrated teams complete 42 to 49 percent of the task against 90 percent for one agent."
+                    />
+                  </a>
+                  <a class="dark" href="safemas-overview-dark.svg" target="_blank" rel="noopener">
+                    <img
+                      src="/safemas-overview-dark.svg"
+                      width="520"
+                      height="840"
+                      loading="lazy"
+                      alt="Overview of safeMAS. The same tasks run on a single agent and on four team structures: centralized, decentralized, hybrid, and independent. In a team the tools are split, so no agent can finish alone. One payload is planted per run, by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Attack success and task completion are read from the final state with no language model as judge, and model calls are counted too. Findings: a tampered message succeeds in 76 percent of runs, attacks on orchestrated teams succeed in 39 to 40 percent against 41 percent for one agent, and orchestrated teams complete 42 to 49 percent of the task against 90 percent for one agent."
+                    />
+                  </a>
+                  <figcaption>safeMAS overview: the setup, the attack, how outcomes are measured, and the main findings. Select the figure to open it full size.</figcaption>
+                </figure>
+              </details>
             </div>
           </article>
-        </section>
-
-        <section id="research">
-          <h2>Research</h2>
-
-          <div class="theme">
-            <h3>LLM and multi-agent security</h3>
-            <ul>
-              <li>
-                How architecture shapes risk: which agents an attacker needs to compromise, and which channels they can
-                reach <a class="cite" href="#pub-3">[3]</a>
-              </li>
-              <li>
-                Internal threats: an agent given a legitimate task and no external attacker reasons its way into
-                harmful, unsanctioned actions
-              </li>
-              <li>
-                Open question: do multi-agent architectures and tool partitioning change how often this happens and how
-                much damage it causes?
-              </li>
-            </ul>
-          </div>
-
-          <div class="theme">
-            <h3>Systems security</h3>
-            <ul>
-              <li>Memory-safety exploitation and binary analysis, from coursework projects</li>
-              <li>Web application attacks and their defenses</li>
-              <li>Groundwork for automated vulnerability detection and program analysis</li>
-            </ul>
-          </div>
-
-          <div class="theme aside">
-            <h3>Also: usable security and privacy</h3>
-            <ul>
-              <li>Consent and privacy literacy in predatory apps <a class="cite" href="#pub-1">[1]</a></li>
-              <li>LLMs for detecting misleading online content <a class="cite" href="#pub-2">[2]</a></li>
-            </ul>
-          </div>
         </section>
 
         <section id="coursework">
@@ -266,7 +320,8 @@
             </p>
             <ul>
               <li>
-                Built safeMAS <a class="cite" href="#pub-3">[3]</a>, under review at ICLR 2027
+                Co-developed safeMAS, a framework for testing multi-agent LLM systems
+                <a class="cite" href="#pub-3">[3]</a>, under review at ICLR 2027
               </li>
               <li>
                 Co-authored the YouTube thumbnail study <a class="cite" href="#pub-2">[2]</a>, accepted at AAAI ICWSM
@@ -342,9 +397,8 @@
               </ul>
             </dd>
 
-
             <dt>Programming</dt>
-            <dd>Python, C++, C, x86 Assembly, MATLAB</dd>
+            <dd>Python, C++, C, Go, MATLAB</dd>
 
             <dt>Security</dt>
             <dd>
@@ -360,7 +414,7 @@
             <dt>Tooling</dt>
             <dd>
               <ul>
-                <li>Linux (Fedora, Kali, KDE Plasma), Docker, Git, VSCode, Google Cloud Platform</li>
+                <li>Linux, Docker, Git, VSCode</li>
                 <li>Socket programming, TCP/IP, threading</li>
               </ul>
             </dd>

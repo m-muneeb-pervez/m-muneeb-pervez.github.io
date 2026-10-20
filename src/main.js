@@ -27,3 +27,10 @@ toggle?.addEventListener('click', () => {
     // Storage can be blocked; the switch still works for this visit.
   }
 })
+
+// Closed dropdowns do not print, so open them for printing.
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('details').forEach((d) => {
+    d.open = true
+  })
+})

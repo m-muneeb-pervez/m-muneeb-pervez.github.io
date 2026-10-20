@@ -27,7 +27,7 @@ jobs:
       - run: npm run build
         env:
           # Optional repository variable (Settings > Secrets and variables > Actions > Variables)
-          VITE_GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+          VITE_UMAMI_WEBSITE_ID: ${{ vars.UMAMI_WEBSITE_ID }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
