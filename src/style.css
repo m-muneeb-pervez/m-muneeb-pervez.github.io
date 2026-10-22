@@ -388,9 +388,6 @@ li > ul {
   text-transform: uppercase;
 }
 
-.interests .minor {
-  color: var(--muted);
-}
 
 /* Publications */
 
