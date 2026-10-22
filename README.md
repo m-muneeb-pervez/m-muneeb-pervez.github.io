@@ -44,8 +44,10 @@ The paper figures in the Publications section are SVGs. Each one exists twice in
 
 Run `python3 figures/build_figures.py` to regenerate all six. The script holds the palette (mirroring `src/style.css`) and draws every figure:
 
-- `www-overview.svg`: the Web Conference study as one picture (who and what was studied, the two interventions, how they were tested, findings), drawn at the size it is shown.
+- `www-overview.svg`: the Web Conference study as one picture (who and what was studied, the two interventions, how they were tested, findings), drawn at the size it is shown (720 px wide).
 - `icwsm-pipeline.svg`: the ICWSM detection pipeline.
 - `safemas-overview.svg`: the whole safeMAS paper as one picture. If the paper's numbers change, edit them in `safemas()` in the script.
+
+All three are drawn at 720 px wide, with text of at least 14 px. On phones each figure scrolls sideways inside its own box (`.fig-scroll` in `src/style.css`) instead of shrinking, and tapping it opens the full-size image.
 
 If the site colors change, update the palette in the script and run it again.

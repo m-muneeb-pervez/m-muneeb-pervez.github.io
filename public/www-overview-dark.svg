@@ -1,99 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 1044" width="520" height="1044" font-family="Arial, Helvetica, Arimo, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 324" width="720" height="324" font-family="Arial, Helvetica, Arimo, sans-serif">
 <defs><marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#cfc9bb"/></marker><marker id="b" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e39274"/></marker></defs>
-<rect width="520" height="1044" fill="#161513"/>
-<text x="6" y="26" font-size="19" font-weight="700" fill="#e9e5db" text-anchor="start">Who and what we studied</text>
-<rect x="6" y="40" width="248" height="104" rx="10" fill="none" stroke="#4b473f" stroke-width="1.4"/>
-<rect x="266" y="40" width="248" height="104" rx="10" fill="none" stroke="#4b473f" stroke-width="1.4"/>
-<g transform="translate(41,63) scale(1.15)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1,50 V24 L16,13 V24 L31,13 V24 L46,13 V24 H59 V50 Z"/><path d="M47,24 V4 H56 V24"/><path d="M9,38 H15 M24,38 H30 M39,38 H45"/></g>
-<g transform="translate(129,81) scale(1.15)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="12" r="5"/><path d="M4.2,10 Q4.2,3 10,3 Q15.8,3 15.8,10"/><path d="M2.5,10 H17.5"/><path d="M1.5,34 Q1.5,20 10,20 Q18.5,20 18.5,34"/></g>
-<g transform="translate(163,81) scale(1.15)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="12" r="5"/><path d="M4.2,10 Q4.2,3 10,3 Q15.8,3 15.8,10"/><path d="M2.5,10 H17.5"/><path d="M1.5,34 Q1.5,20 10,20 Q18.5,20 18.5,34"/></g>
-<g transform="translate(197,81) scale(1.15)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="12" r="5"/><path d="M4.2,10 Q4.2,3 10,3 Q15.8,3 15.8,10"/><path d="M2.5,10 H17.5"/><path d="M1.5,34 Q1.5,20 10,20 Q18.5,20 18.5,34"/></g>
-<g transform="translate(326,47) scale(0.9)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="58" height="100" rx="10"/><path d="M22,9 H38"/><rect x="9" y="32" width="42" height="46" rx="6"/><path d="M15,68 H26 M34,68 H45"/></g>
-<g transform="translate(326,47) scale(0.9)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M30,62 C25,55 24,52 24,49 A6,6 0 0 1 36,49 C36,52 35,55 30,62 Z"/><circle cx="30" cy="49" r="2"/></g>
-<g transform="translate(404,56) scale(1.0)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="26" height="18" rx="4"/><circle cx="14" cy="16" r="5"/><path d="M8,7 L10,3 H18 L20,7"/></g>
-<g transform="translate(406,90) scale(1.0)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="1" width="9" height="16" rx="4.5"/><path d="M4,13 Q4,23 13.5,23 Q23,23 23,13"/><path d="M13.5,23 V28"/></g>
-<g transform="translate(404,118) scale(0.8)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3,3 H25 Q27,3 27,5 V17 Q27,19 25,19 H12 L6,25 V19 H3 Q1,19 1,17 V5 Q1,3 3,3 Z"/></g>
-<text x="130" y="172" font-size="17" font-weight="700" fill="#e9e5db" text-anchor="middle">34 factory workers</text>
-<text x="130" y="192" font-size="15" font-weight="400" fill="#a39d90" text-anchor="middle">interviewed in Lahore</text>
-<text x="390" y="172" font-size="17" font-weight="700" fill="#e9e5db" text-anchor="middle">50 apps</text>
-<text x="390" y="192" font-size="15" font-weight="400" fill="#a39d90" text-anchor="middle">loan, gambling, and trading</text>
-<text x="6" y="224" font-size="16" font-weight="400" fill="#a39d90" text-anchor="start">30 of the 34 had never been told how their data is protected.</text>
-<path d="M6,248 H514" stroke="#4b473f" stroke-width="1.2"/>
-<text x="6" y="282" font-size="19" font-weight="700" fill="#e9e5db" text-anchor="start">What we built from each privacy policy</text>
-<rect x="22" y="300" width="96" height="76" rx="10" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
-<g transform="translate(50,318) scale(1.0)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6,1 H26 L34,9 V39 H6 Z"/><path d="M26,1 V9 H34"/><path d="M12,19 H28 M12,26 H28 M12,33 H21"/></g>
-<text x="70" y="402" font-size="16" font-weight="700" fill="#e9e5db" text-anchor="middle">Privacy policy</text>
-<rect x="212" y="300" width="96" height="76" rx="10" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
-<text x="260" y="402" font-size="16" font-weight="700" fill="#e9e5db" text-anchor="middle">LLM summary</text>
-<rect x="402" y="300" width="96" height="76" rx="10" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
-<g transform="translate(430,318) scale(1.0)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2,15 H9 L19,7 V33 L9,25 H2 Z"/><path d="M25,14 Q30,20 25,26"/><path d="M30,9 Q38,20 30,31"/></g>
-<text x="450" y="402" font-size="16" font-weight="700" fill="#e9e5db" text-anchor="middle">Urdu audio</text>
-<g transform="translate(240,318) scale(1.0)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="32" height="32" rx="8"/><path d="M13,-1 V4 M20,-1 V4 M27,-1 V4 M13,36 V41 M20,36 V41 M27,36 V41"/></g>
-<text x="260" y="342" font-size="15" font-weight="700" fill="#e9e5db" text-anchor="middle">AI</text>
-<path d="M122,338 L208,338" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
-<path d="M312,338 L398,338" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
-<path d="M450,412 L450,458" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
-<path d="M450,430 L130,430 L130,458" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
-<rect x="6" y="460" width="248" height="118" rx="10" fill="#3f2e26" stroke="#e39274" stroke-width="1.8"/>
-<text x="130" y="546" font-size="17" font-weight="700" fill="#e39274" text-anchor="middle">Intervention 1</text>
-<text x="130" y="567" font-size="15" font-weight="400" fill="#a39d90" text-anchor="middle">audio summary</text>
-<rect x="266" y="460" width="248" height="118" rx="10" fill="#3f2e26" stroke="#e39274" stroke-width="1.8"/>
-<text x="390" y="546" font-size="17" font-weight="700" fill="#e39274" text-anchor="middle">Intervention 2</text>
-<text x="390" y="567" font-size="15" font-weight="400" fill="#a39d90" text-anchor="middle">audio plus risk visuals</text>
-<g transform="translate(110,474) scale(1.0)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2,15 H9 L19,7 V33 L9,25 H2 Z"/><path d="M25,14 Q30,20 25,26"/><path d="M30,9 Q38,20 30,31"/></g>
-<g transform="translate(330,474) scale(1.0)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2,15 H9 L19,7 V33 L9,25 H2 Z"/><path d="M25,14 Q30,20 25,26"/><path d="M30,9 Q38,20 30,31"/></g>
-<text x="384" y="500" font-size="24" font-weight="400" fill="#e39274" text-anchor="middle">+</text>
-<g transform="translate(402,478) scale(0.95)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="46" height="34" rx="5"/><path d="M8,29 V20 L16,13 L24,20 V29 Z"/></g>
-<g transform="translate(402,478) scale(0.95)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M36,28 C32,23 31,21 31,19 A5,5 0 0 1 41,19 C41,21 40,23 36,28 Z"/><circle cx="36" cy="19" r="1.7"/></g>
-<path d="M6,604 H514" stroke="#4b473f" stroke-width="1.2"/>
-<text x="6" y="638" font-size="19" font-weight="700" fill="#e9e5db" text-anchor="start">How it was tested</text>
-<rect x="6" y="656" width="152" height="92" rx="10" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
-<g transform="translate(82,702) scale(1.15)" fill="none" stroke="#e9e5db" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle r="22"/><circle cx="-8" cy="-5" r="1.9" fill="#e9e5db" stroke="none"/><circle cx="8" cy="-5" r="1.9" fill="#e9e5db" stroke="none"/><path d="M-9,6 Q0,15 9,6"/></g>
-<text x="82" y="774" font-size="16" font-weight="700" fill="#e9e5db" text-anchor="middle">Baseline</text>
-<text x="82" y="794" font-size="15" font-weight="400" fill="#a39d90" text-anchor="middle">most were confident</text>
-<rect x="184" y="656" width="152" height="92" rx="10" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
-<g transform="translate(260,702) scale(1.15)" fill="none" stroke="#e9e5db" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle r="22"/><circle cx="-8" cy="-5" r="1.9" fill="#e9e5db" stroke="none"/><circle cx="8" cy="-5" r="1.9" fill="#e9e5db" stroke="none"/><path d="M-8,11 Q0,6 8,11"/></g>
-<text x="260" y="774" font-size="16" font-weight="700" fill="#e9e5db" text-anchor="middle">Intervention 1</text>
-<text x="260" y="794" font-size="15" font-weight="400" fill="#a39d90" text-anchor="middle">more cautious</text>
-<rect x="362" y="656" width="152" height="92" rx="10" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
-<g transform="translate(438,702) scale(1.15)" fill="none" stroke="#e39274" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle r="22"/><circle cx="-8" cy="-5" r="1.9" fill="#e39274" stroke="none"/><circle cx="8" cy="-5" r="1.9" fill="#e39274" stroke="none"/><path d="M-9,13 Q0,5 9,13"/><path d="M-12,-9 L-5,-12 M12,-9 L5,-12"/></g>
-<text x="438" y="774" font-size="16" font-weight="700" fill="#e9e5db" text-anchor="middle">Intervention 2</text>
-<text x="438" y="794" font-size="15" font-weight="400" fill="#a39d90" text-anchor="middle">92 to 94% cautious</text>
-<path d="M160,702 L182,702" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
-<path d="M338,702 L360,702" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
-<text x="6" y="828" font-size="16" font-weight="400" fill="#a39d90" text-anchor="start">Each person rated their confidence in installing a finance app.</text>
-<path d="M6,854 H514" stroke="#4b473f" stroke-width="1.2"/>
-<text x="6" y="888" font-size="19" font-weight="700" fill="#e9e5db" text-anchor="start">What it finds</text>
-<g transform="translate(6,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(27,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(48,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(69,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(90,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(111,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(132,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(153,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(174,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(195,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(216,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(237,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(258,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(279,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(300,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(321,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(342,906)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(363,906)" fill="#4b473f"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(384,906)" fill="#4b473f"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<g transform="translate(405,906)" fill="#4b473f"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
-<text x="6" y="958" font-size="16"><tspan font-weight="700" fill="#e39274">85%</tspan><tspan fill="#a39d90"> of participants did not understand basic app permissions</tspan></text>
-<g transform="translate(6,981)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(32,981)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(58,981)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(84,981)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(110,981)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(136,981)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(162,981)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(188,981)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(214,981)" fill="#4b473f"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<g transform="translate(240,981)" fill="#4b473f"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
-<text x="6" y="1032" font-size="16"><tspan font-weight="700" fill="#e9e5db">80%</tspan><tspan fill="#a39d90"> of apps (40 of 50) ask for more permissions than they need</tspan></text>
+<rect width="720" height="324" fill="#161513"/>
+<path d="M180,10 V314" stroke="#4b473f" stroke-width="1.2"/>
+<path d="M360,10 V314" stroke="#4b473f" stroke-width="1.2"/>
+<path d="M540,10 V314" stroke="#4b473f" stroke-width="1.2"/>
+<text x="6" y="26" font-size="17" font-weight="700" fill="#e9e5db" text-anchor="start">Studied</text>
+<g transform="translate(24,50) scale(0.8)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1,50 V24 L16,13 V24 L31,13 V24 L46,13 V24 H59 V50 Z"/><path d="M47,24 V4 H56 V24"/><path d="M9,38 H15 M24,38 H30 M39,38 H45"/></g>
+<g transform="translate(84,63) scale(0.8)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="12" r="5"/><path d="M4.2,10 Q4.2,3 10,3 Q15.8,3 15.8,10"/><path d="M2.5,10 H17.5"/><path d="M1.5,34 Q1.5,20 10,20 Q18.5,20 18.5,34"/></g>
+<g transform="translate(106,63) scale(0.8)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="12" r="5"/><path d="M4.2,10 Q4.2,3 10,3 Q15.8,3 15.8,10"/><path d="M2.5,10 H17.5"/><path d="M1.5,34 Q1.5,20 10,20 Q18.5,20 18.5,34"/></g>
+<g transform="translate(128,63) scale(0.8)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="12" r="5"/><path d="M4.2,10 Q4.2,3 10,3 Q15.8,3 15.8,10"/><path d="M2.5,10 H17.5"/><path d="M1.5,34 Q1.5,20 10,20 Q18.5,20 18.5,34"/></g>
+<text x="90" y="112" font-size="14.5" font-weight="700" fill="#e9e5db" text-anchor="middle">34 factory workers</text>
+<text x="90" y="131" font-size="14" font-weight="400" fill="#a39d90" text-anchor="middle">interviewed in Lahore</text>
+<g transform="translate(32,154) scale(0.72)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="58" height="100" rx="10"/><path d="M22,9 H38"/><rect x="9" y="32" width="42" height="46" rx="6"/><path d="M15,68 H26 M34,68 H45"/></g>
+<g transform="translate(32,154) scale(0.72)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M30,62 C25,55 24,52 24,49 A6,6 0 0 1 36,49 C36,52 35,55 30,62 Z"/><circle cx="30" cy="49" r="2"/></g>
+<g transform="translate(92,160) scale(0.85)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="26" height="18" rx="4"/><circle cx="14" cy="16" r="5"/><path d="M8,7 L10,3 H18 L20,7"/></g>
+<g transform="translate(94,188) scale(0.85)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="1" width="9" height="16" rx="4.5"/><path d="M4,13 Q4,23 13.5,23 Q23,23 23,13"/><path d="M13.5,23 V28"/></g>
+<g transform="translate(92,214) scale(0.72)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3,3 H25 Q27,3 27,5 V17 Q27,19 25,19 H12 L6,25 V19 H3 Q1,19 1,17 V5 Q1,3 3,3 Z"/></g>
+<text x="90" y="254" font-size="14.5" font-weight="700" fill="#e9e5db" text-anchor="middle">50 apps</text>
+<text x="90" y="273" font-size="14" font-weight="400" fill="#a39d90" text-anchor="middle">loan, gambling, trading</text>
+<text x="186" y="26" font-size="17" font-weight="700" fill="#e9e5db" text-anchor="start">Built</text>
+<rect x="190" y="42" width="44" height="40" rx="8" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
+<g transform="translate(196,46) scale(0.8)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6,1 H26 L34,9 V39 H6 Z"/><path d="M26,1 V9 H34"/><path d="M12,19 H28 M12,26 H28 M12,33 H21"/></g>
+<text x="244" y="67" font-size="14.5" font-weight="700" fill="#e9e5db" text-anchor="start">Privacy policy</text>
+<path d="M212,83 L212,93" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="190" y="94" width="44" height="40" rx="8" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
+<g transform="translate(196,98) scale(0.8)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="32" height="32" rx="8"/><path d="M13,-1 V4 M20,-1 V4 M27,-1 V4 M13,36 V41 M20,36 V41 M27,36 V41"/></g>
+<text x="212" y="119" font-size="14" font-weight="700" fill="#e9e5db" text-anchor="middle">AI</text>
+<text x="244" y="119" font-size="14.5" font-weight="700" fill="#e9e5db" text-anchor="start">LLM summary</text>
+<path d="M212,135 L212,145" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="190" y="146" width="44" height="40" rx="8" fill="#161513" stroke="#4b473f" stroke-width="1.4"/>
+<g transform="translate(196,150) scale(0.8)" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2,15 H9 L19,7 V33 L9,25 H2 Z"/><path d="M25,14 Q30,20 25,26"/><path d="M30,9 Q38,20 30,31"/></g>
+<text x="244" y="171" font-size="14.5" font-weight="700" fill="#e9e5db" text-anchor="start">Urdu audio</text>
+<path d="M212,187 L212,200 L315,200 L315,208" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
+<path d="M229,200 L229,208" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="190" y="210" width="76" height="56" rx="8" fill="#3f2e26" stroke="#e39274" stroke-width="1.8"/>
+<g transform="translate(217,223) scale(0.85)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2,15 H9 L19,7 V33 L9,25 H2 Z"/><path d="M25,14 Q30,20 25,26"/><path d="M30,9 Q38,20 30,31"/></g>
+<text x="228" y="288" font-size="14.5" font-weight="700" fill="#e39274" text-anchor="middle">Audio</text>
+<rect x="276" y="210" width="76" height="56" rx="8" fill="#3f2e26" stroke="#e39274" stroke-width="1.8"/>
+<g transform="translate(281,233) scale(0.55)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2,15 H9 L19,7 V33 L9,25 H2 Z"/><path d="M25,14 Q30,20 25,26"/><path d="M30,9 Q38,20 30,31"/></g>
+<g transform="translate(307,235) scale(0.63)" fill="none" stroke="#e39274" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="46" height="34" rx="5"/><path d="M8,29 V20 L16,13 L24,20 V29 Z"/></g>
+<text x="314" y="288" font-size="14.5" font-weight="700" fill="#e39274" text-anchor="middle">Audio and</text>
+<text x="314" y="306" font-size="14.5" font-weight="700" fill="#e39274" text-anchor="middle">visuals</text>
+<circle cx="201" cy="221" r="10" fill="#e39274"/>
+<text x="201" y="226" font-size="14" font-weight="700" fill="#161513" text-anchor="middle">1</text>
+<circle cx="287" cy="221" r="10" fill="#e39274"/>
+<text x="287" y="226" font-size="14" font-weight="700" fill="#161513" text-anchor="middle">2</text>
+<text x="366" y="26" font-size="17" font-weight="700" fill="#e9e5db" text-anchor="start">Tested</text>
+<g transform="translate(384,68) scale(0.72)" fill="none" stroke="#e9e5db" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle r="22"/><circle cx="-8" cy="-5" r="1.9" fill="#e9e5db" stroke="none"/><circle cx="8" cy="-5" r="1.9" fill="#e9e5db" stroke="none"/><path d="M-9,6 Q0,15 9,6"/></g>
+<text x="408" y="67" font-size="14.5" font-weight="700" fill="#e9e5db" text-anchor="start">Baseline</text>
+<text x="408" y="85" font-size="14" font-weight="400" fill="#a39d90" text-anchor="start">mostly confident</text>
+<path d="M384,87 L384,112" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
+<g transform="translate(384,132) scale(0.72)" fill="none" stroke="#e9e5db" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle r="22"/><circle cx="-8" cy="-5" r="1.9" fill="#e9e5db" stroke="none"/><circle cx="8" cy="-5" r="1.9" fill="#e9e5db" stroke="none"/><path d="M-8,11 Q0,6 8,11"/></g>
+<text x="408" y="131" font-size="14.5" font-weight="700" fill="#e9e5db" text-anchor="start">After 1</text>
+<text x="408" y="149" font-size="14" font-weight="400" fill="#a39d90" text-anchor="start">more cautious</text>
+<path d="M384,151 L384,176" fill="none" stroke="#cfc9bb" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#a)"/>
+<g transform="translate(384,196) scale(0.72)" fill="none" stroke="#e39274" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle r="22"/><circle cx="-8" cy="-5" r="1.9" fill="#e39274" stroke="none"/><circle cx="8" cy="-5" r="1.9" fill="#e39274" stroke="none"/><path d="M-9,13 Q0,5 9,13"/><path d="M-12,-9 L-5,-12 M12,-9 L5,-12"/></g>
+<text x="408" y="195" font-size="14.5" font-weight="700" fill="#e9e5db" text-anchor="start">After 2</text>
+<text x="408" y="213" font-size="14" font-weight="400" fill="#a39d90" text-anchor="start">92 to 94% cautious</text>
+<text x="366" y="252" font-size="14" font-weight="400" fill="#a39d90" text-anchor="start">Each person rated their</text>
+<text x="366" y="271" font-size="14" font-weight="400" fill="#a39d90" text-anchor="start">confidence in installing</text>
+<text x="366" y="290" font-size="14" font-weight="400" fill="#a39d90" text-anchor="start">a finance app.</text>
+<text x="546" y="26" font-size="17" font-weight="700" fill="#e9e5db" text-anchor="start">Found</text>
+<g transform="translate(548.0,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(564.4,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(580.8,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(597.2,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(613.6,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(630.0,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(646.4,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(662.8,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(679.2,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(695.6,42)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(548.0,70)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(564.4,70)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(580.8,70)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(597.2,70)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(613.6,70)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(630.0,70)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(646.4,70)" fill="#e39274"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(662.8,70)" fill="#4b473f"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(679.2,70)" fill="#4b473f"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<g transform="translate(695.6,70)" fill="#4b473f"><circle cx="8" cy="5" r="4.2"/><path d="M1,22 Q1,12 8,12 Q15,12 15,22 Z"/></g>
+<text x="546" y="118" font-size="14.5"><tspan font-weight="700" fill="#e39274">85%</tspan><tspan fill="#a39d90"> did not understand</tspan></text>
+<text x="546" y="137" font-size="14.5" font-weight="400" fill="#a39d90" text-anchor="start">basic app permissions</text>
+<g transform="translate(548,160)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(581,160)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(614,160)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(647,160)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(680,160)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(548,194)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(581,194)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(614,194)" fill="#e39274"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(647,194)" fill="#4b473f"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<g transform="translate(680,194)" fill="#4b473f"><rect width="15" height="23" rx="3.4"/><rect x="2" y="3.6" width="11" height="14" rx="1.4" fill="#161513"/><circle cx="7.5" cy="20.4" r="1.2" fill="#161513"/></g>
+<text x="546" y="236" font-size="14.5"><tspan font-weight="700" fill="#e9e5db">80%</tspan><tspan fill="#a39d90"> of apps (40 of 50)</tspan></text>
+<text x="546" y="255" font-size="14.5" font-weight="400" fill="#a39d90" text-anchor="start">ask for more permissions</text>
+<text x="546" y="274" font-size="14.5" font-weight="400" fill="#a39d90" text-anchor="start">than needed</text>
 </svg>

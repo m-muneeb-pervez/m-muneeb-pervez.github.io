@@ -6,7 +6,7 @@
     <title>Muneeb Pervez | LLM and multi-agent security</title>
     <meta
       name="description"
-      content="Muneeb Pervez is a Computer Science undergraduate at LUMS working on the security of LLM agents and multi-agent systems, with side work in usable security and privacy. Applying to PhD programs for Fall 2027."
+      content="Muneeb Pervez is a Computer Science undergraduate at LUMS working on the security of LLM agents and multi-agent systems, systems security, and usable security and privacy."
     />
     <meta name="author" content="Muneeb Pervez" />
     <meta name="color-scheme" content="light" />
@@ -54,10 +54,7 @@
         </div>
 
         <div class="about">
-          <p class="lead">
-            I am a Computer Science undergraduate at LUMS (class of 2027). I work on the security of LLM agents and
-            multi-agent systems, with side work in usable security and privacy.
-          </p>
+          <p class="lead">I am a Computer Science undergraduate at LUMS (class of 2027).</p>
           <ul>
             <li>
               Research assistant at the DAIS Lab with
@@ -65,11 +62,18 @@
               and the ISPL with
               <a class="person" href="https://www.lums.edu.pk/lums_employee/422" target="_blank" rel="noopener">Dr Fareed Zaffar</a>
             </li>
+          </ul>
+          <p class="about-label">Research interests</p>
+          <ul class="interests">
             <li>
-              Now: extending the safeMAS framework <a class="cite" href="#pub-3">[3]</a> to internal threats, where
-              an agent causes harm with no outside attacker
+              <strong>LLM and multi-agent security:</strong> attacks on tool-using agents and agent teams
+              <a class="cite" href="#pub-3">[3]</a>
             </li>
-            <li>Applying to PhD programs for Fall 2027</li>
+            <li><strong>Systems security:</strong> software vulnerabilities and defenses against them</li>
+            <li class="minor">
+              <strong>Usable security and privacy:</strong> predatory apps <a class="cite" href="#pub-1">[1]</a>,
+              misleading content <a class="cite" href="#pub-2">[2]</a>
+            </li>
           </ul>
         </div>
 
@@ -89,7 +93,6 @@
 
         <nav class="toc" aria-label="Sections">
           <ul>
-            <li><a href="#research">Research</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#coursework">Coursework</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -105,22 +108,6 @@
       </header>
 
       <main id="main">
-        <section id="research">
-          <h2>Research interests</h2>
-          <ul class="interests">
-            <li>
-              <strong>LLM and multi-agent security:</strong> attacks on tool-using agents and agent teams
-              <a class="cite" href="#pub-3">[3]</a>
-            </li>
-            <li><strong>Systems security:</strong> software vulnerabilities and defenses against them</li>
-          </ul>
-          <p class="side">
-            <span class="side-label">Side interest</span>
-            Usable security and privacy: predatory apps <a class="cite" href="#pub-1">[1]</a>, misleading content
-            <a class="cite" href="#pub-2">[2]</a>
-          </p>
-        </section>
-
         <section id="publications">
           <h2>Publications</h2>
 
@@ -152,25 +139,27 @@
                   </li>
                 </ul>
                 <figure class="figure native">
-                  <a class="light" href="www-overview-light.svg" target="_blank" rel="noopener">
-                    <img
-                      src="/www-overview-light.svg"
-                      width="520"
-                      height="1044"
-                      loading="lazy"
-                      alt="Illustrated overview of the Web Conference study. Thirty-four factory workers in Lahore were interviewed, and 50 loan, gambling, and trading apps were analyzed. Thirty of the 34 had never been told how their data is protected. Each privacy policy was summarized by an LLM and turned into Urdu audio, giving Intervention 1, an audio summary, and Intervention 2, the audio plus risk visuals. Each person rated their confidence in installing a finance app, shown as faces: most were confident at baseline, more cautious after Intervention 1, and 92 to 94 percent cautious after Intervention 2. Findings: 85 percent of participants did not understand basic app permissions, and 80 percent of apps asked for more permissions than they needed."
-                    />
-                  </a>
-                  <a class="dark" href="www-overview-dark.svg" target="_blank" rel="noopener">
-                    <img
-                      src="/www-overview-dark.svg"
-                      width="520"
-                      height="1044"
-                      loading="lazy"
-                      alt="Illustrated overview of the Web Conference study. Thirty-four factory workers in Lahore were interviewed, and 50 loan, gambling, and trading apps were analyzed. Thirty of the 34 had never been told how their data is protected. Each privacy policy was summarized by an LLM and turned into Urdu audio, giving Intervention 1, an audio summary, and Intervention 2, the audio plus risk visuals. Each person rated their confidence in installing a finance app, shown as faces: most were confident at baseline, more cautious after Intervention 1, and 92 to 94 percent cautious after Intervention 2. Findings: 85 percent of participants did not understand basic app permissions, and 80 percent of apps asked for more permissions than they needed."
-                    />
-                  </a>
-                  <figcaption>Web Conference study, illustrated: who and what we studied, the two interventions, how they were tested, and the main findings. Select the figure to open it full size.</figcaption>
+                  <div class="fig-scroll">
+                    <a class="light" href="www-overview-light.svg" target="_blank" rel="noopener">
+                      <img
+                        src="/www-overview-light.svg"
+                        width="720"
+                        height="324"
+                        loading="lazy"
+                        alt="Illustrated overview of the Web Conference study in four columns. Studied: 34 factory workers interviewed in Lahore, and 50 loan, gambling, and trading apps. Built: a privacy policy is summarized by an LLM and turned into Urdu audio, giving Intervention 1, audio, and Intervention 2, audio and visuals. Tested: each person rated their confidence in installing a finance app, shown as faces: mostly confident at baseline, more cautious after Intervention 1, and 92 to 94 percent cautious after Intervention 2. Found: 85 percent did not understand basic app permissions, and 80 percent of apps (40 of 50) ask for more permissions than needed."
+                      />
+                    </a>
+                    <a class="dark" href="www-overview-dark.svg" target="_blank" rel="noopener">
+                      <img
+                        src="/www-overview-dark.svg"
+                        width="720"
+                        height="324"
+                        loading="lazy"
+                        alt="Illustrated overview of the Web Conference study in four columns. Studied: 34 factory workers interviewed in Lahore, and 50 loan, gambling, and trading apps. Built: a privacy policy is summarized by an LLM and turned into Urdu audio, giving Intervention 1, audio, and Intervention 2, audio and visuals. Tested: each person rated their confidence in installing a finance app, shown as faces: mostly confident at baseline, more cautious after Intervention 1, and 92 to 94 percent cautious after Intervention 2. Found: 85 percent did not understand basic app permissions, and 80 percent of apps (40 of 50) ask for more permissions than needed."
+                      />
+                    </a>
+                  </div>
+                  <figcaption>The Web Conference study in one picture: who and what was studied, the two interventions, how they were tested, and the main findings. Select the figure to open it full size.</figcaption>
                 </figure>
               </details>
             </div>
@@ -199,25 +188,27 @@
                   <li>Multimodal LLM pipeline over thumbnails, video descriptions, and subtitle transcripts</li>
                   <li>Benchmarked four frontier LLMs and two open-weight vision-language models</li>
                 </ul>
-                <figure class="figure">
-                  <a class="light" href="icwsm-pipeline-light.svg" target="_blank" rel="noopener">
-                    <img
-                      src="/icwsm-pipeline-light.svg"
-                      width="1100"
-                      height="400"
-                      loading="lazy"
-                      alt="Pipeline diagram. 2,843 videos from eight countries give three signals per video: the thumbnail, the subtitles, and a video description. They feed a prompt that uses zero-shot, fixed few-shot, or dynamic few-shot prompting, where two similar examples come from an example bank. An LLM, either four proprietary models or two open-weight models, predicts misleading or not misleading."
-                    />
-                  </a>
-                  <a class="dark" href="icwsm-pipeline-dark.svg" target="_blank" rel="noopener">
-                    <img
-                      src="/icwsm-pipeline-dark.svg"
-                      width="1100"
-                      height="400"
-                      loading="lazy"
-                      alt="Pipeline diagram. 2,843 videos from eight countries give three signals per video: the thumbnail, the subtitles, and a video description. They feed a prompt that uses zero-shot, fixed few-shot, or dynamic few-shot prompting, where two similar examples come from an example bank. An LLM, either four proprietary models or two open-weight models, predicts misleading or not misleading."
-                    />
-                  </a>
+                <figure class="figure native">
+                  <div class="fig-scroll">
+                    <a class="light" href="icwsm-pipeline-light.svg" target="_blank" rel="noopener">
+                      <img
+                        src="/icwsm-pipeline-light.svg"
+                        width="720"
+                        height="316"
+                        loading="lazy"
+                        alt="Pipeline diagram. 2,843 videos from eight countries give three signals per video: the thumbnail, the subtitles, and a video description. They feed a prompt that uses zero-shot, fixed few-shot, or dynamic few-shot prompting, where two similar examples come from an example bank. An LLM, either four proprietary models or two open-weight models, predicts misleading or not misleading."
+                      />
+                    </a>
+                    <a class="dark" href="icwsm-pipeline-dark.svg" target="_blank" rel="noopener">
+                      <img
+                        src="/icwsm-pipeline-dark.svg"
+                        width="720"
+                        height="316"
+                        loading="lazy"
+                        alt="Pipeline diagram. 2,843 videos from eight countries give three signals per video: the thumbnail, the subtitles, and a video description. They feed a prompt that uses zero-shot, fixed few-shot, or dynamic few-shot prompting, where two similar examples come from an example bank. An LLM, either four proprietary models or two open-weight models, predicts misleading or not misleading."
+                      />
+                    </a>
+                  </div>
                   <figcaption>How the detector works: a video's thumbnail, subtitles, and description go into one prompt, and an LLM judges whether the thumbnail is misleading. Dynamic few-shot prompting, which adds two similar examples, gave the best result. Select the figure to open it full size.</figcaption>
                 </figure>
               </details>
@@ -251,25 +242,27 @@
                   <li>Orchestrated teams make 16 to 60 times as many model calls as a single agent</li>
                 </ul>
                 <figure class="figure native">
-                  <a class="light" href="safemas-overview-light.svg" target="_blank" rel="noopener">
-                    <img
-                      src="/safemas-overview-light.svg"
-                      width="520"
-                      height="840"
-                      loading="lazy"
-                      alt="Overview of safeMAS. The same tasks run on a single agent and on four team structures: centralized, decentralized, hybrid, and independent. In a team the tools are split, so no agent can finish alone. One payload is planted per run, by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Attack success and task completion are read from the final state with no language model as judge, and model calls are counted too. Findings: a tampered message succeeds in 76 percent of runs, attacks on orchestrated teams succeed in 39 to 40 percent against 41 percent for one agent, and orchestrated teams complete 42 to 49 percent of the task against 90 percent for one agent."
-                    />
-                  </a>
-                  <a class="dark" href="safemas-overview-dark.svg" target="_blank" rel="noopener">
-                    <img
-                      src="/safemas-overview-dark.svg"
-                      width="520"
-                      height="840"
-                      loading="lazy"
-                      alt="Overview of safeMAS. The same tasks run on a single agent and on four team structures: centralized, decentralized, hybrid, and independent. In a team the tools are split, so no agent can finish alone. One payload is planted per run, by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Attack success and task completion are read from the final state with no language model as judge, and model calls are counted too. Findings: a tampered message succeeds in 76 percent of runs, attacks on orchestrated teams succeed in 39 to 40 percent against 41 percent for one agent, and orchestrated teams complete 42 to 49 percent of the task against 90 percent for one agent."
-                    />
-                  </a>
-                  <figcaption>safeMAS overview: the setup, the attack, how outcomes are measured, and the main findings. Select the figure to open it full size.</figcaption>
+                  <div class="fig-scroll">
+                    <a class="light" href="safemas-overview-light.svg" target="_blank" rel="noopener">
+                      <img
+                        src="/safemas-overview-light.svg"
+                        width="720"
+                        height="340"
+                        loading="lazy"
+                        alt="Overview of safeMAS in four parts. Same tasks, five team structures: a single agent and centralized, decentralized, hybrid, and independent teams. In a team the tools are split, so no agent can finish alone. One payload is planted by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Findings: a tampered message succeeds in 76 percent of runs, attacks on orchestrated teams succeed in 39 to 40 percent against 41 percent for one agent on the same attacks, and orchestrated teams complete 42 to 49 percent of the task against 90 percent for one agent. Attack success and task completion come from the final state, with no language model as judge."
+                      />
+                    </a>
+                    <a class="dark" href="safemas-overview-dark.svg" target="_blank" rel="noopener">
+                      <img
+                        src="/safemas-overview-dark.svg"
+                        width="720"
+                        height="340"
+                        loading="lazy"
+                        alt="Overview of safeMAS in four parts. Same tasks, five team structures: a single agent and centralized, decentralized, hybrid, and independent teams. In a team the tools are split, so no agent can finish alone. One payload is planted by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Findings: a tampered message succeeds in 76 percent of runs, attacks on orchestrated teams succeed in 39 to 40 percent against 41 percent for one agent on the same attacks, and orchestrated teams complete 42 to 49 percent of the task against 90 percent for one agent. Attack success and task completion come from the final state, with no language model as judge."
+                      />
+                    </a>
+                  </div>
+                  <figcaption>safeMAS in one picture: the team structures, how a payload travels, and the main findings. Select the figure to open it full size.</figcaption>
                 </figure>
               </details>
             </div>
@@ -324,6 +317,7 @@
                 Co-developed safeMAS, a framework for testing multi-agent LLM systems
                 <a class="cite" href="#pub-3">[3]</a>, under review at ICLR 2027
               </li>
+              <li>Extending it to internal threats: an agent causing harm with no outside attacker</li>
               <li>
                 Co-authored the YouTube thumbnail study <a class="cite" href="#pub-2">[2]</a>, accepted at AAAI ICWSM
                 2027
