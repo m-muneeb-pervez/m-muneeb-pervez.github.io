@@ -3,6 +3,8 @@
 // A visit is counted only after the visitor interacts with the page (scroll, mouse move, touch,
 // key press), which leaves out scanners and bots that load the page and leave. Automated
 // browsers are skipped, and Umami only reports from the allowed domain.
+// Once a visit is counted, two extra events describe it: "section-view" (each section the visitor
+// scrolls to, once) and "leave" (seconds spent on the page, sent when they leave or switch away).
 
 const websiteId = import.meta.env.VITE_UMAMI_WEBSITE_ID
 // Umami Cloud by default. For a self-hosted Umami, set VITE_UMAMI_SRC to its script URL.
@@ -34,11 +36,56 @@ let interacted = false
 let scriptReady = false
 let pageviewSent = false
 
+// Engagement, tracked only after the pageview has been sent.
+let shownAt = null // when the page last became visible, or null while it is hidden
+let activeMs = 0 // visible time so far
+let lastLeaveSeconds = 0
+const seenSections = new Set()
+
+// Reports each section the first time it scrolls into view.
+function watchSections() {
+  if (!('IntersectionObserver' in window)) return
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        const id = entry.target.id
+        if (!entry.isIntersecting || seenSections.has(id)) continue
+        seenSections.add(id)
+        observer.unobserve(entry.target)
+        window.umami?.track?.('section-view', { section: id })
+      }
+    },
+    { rootMargin: '0px 0px -30% 0px' }, // counts once the section reaches the upper 70% of the screen
+  )
+  document.querySelectorAll('main section[id]').forEach((el) => observer.observe(el))
+}
+
+// Sends the time spent on the page when the visitor leaves or switches away.
+function pause() {
+  if (shownAt === null) return
+  activeMs += performance.now() - shownAt
+  shownAt = null
+  const seconds = Math.round(activeMs / 1000)
+  if (seconds < 1 || seconds === lastLeaveSeconds) return
+  lastLeaveSeconds = seconds
+  window.umami?.track?.('leave', { seconds })
+}
+
+function resume() {
+  if (pageviewSent && shownAt === null) shownAt = performance.now()
+}
+
+function startEngagement() {
+  shownAt = document.visibilityState === 'hidden' ? null : performance.now()
+  watchSections()
+}
+
 // Sends the pageview once the visitor has interacted and Umami's script has loaded.
 function flush() {
   if (pageviewSent || !interacted || !scriptReady) return
   pageviewSent = true
   window.umami?.track?.()
+  startEngagement()
 }
 
 function onInteract() {
@@ -78,5 +125,7 @@ export function initAnalytics() {
 
   INTERACTIONS.forEach((type) => window.addEventListener(type, onInteract, { capture: true, passive: true }))
   document.addEventListener('click', onClick)
+  document.addEventListener('visibilitychange', () => (document.visibilityState === 'hidden' ? pause() : resume()))
+  window.addEventListener('pagehide', pause)
   say('Visits are counted with Umami, which uses no cookies and does not follow you across sites.')
 }
