@@ -399,6 +399,15 @@ li > ul {
   font-weight: 400;
 }
 
+/* The accepted papers are what a reader should see first, so their label stands out. */
+.group.accepted {
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
 .pub {
   display: grid;
   grid-template-columns: 2.1rem minmax(0, 1fr);
@@ -525,9 +534,14 @@ li > ul {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .pub:target {
+  .pub:target,
+  .entry li:target {
     animation: arrive 2.4s ease-out;
   }
+}
+
+.entry li {
+  scroll-margin-top: 2rem;
 }
 
 @keyframes arrive {
@@ -563,7 +577,7 @@ li > ul {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
-  font-variant-numeric: tabular-nums;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -575,6 +589,10 @@ li > ul {
 
 .org + .sub {
   margin-top: 0.05rem;
+}
+
+.entry .sub {
+  font-weight: 700;
 }
 
 .sub {
@@ -605,7 +623,7 @@ li > ul {
 .rows dt {
   color: var(--muted);
   font-size: 0.95rem;
-  font-variant-numeric: tabular-nums;
+  font-weight: 700;
 }
 
 .facts dt {
