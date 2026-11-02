@@ -1,10 +1,10 @@
 :root {
-  --bg: #f7f4ed;
-  --ink: #1c1b19;
-  --muted: #6a655b;
-  --rule: #d9d3c5;
-  --accent: #9a3b26;
-  --wash: rgb(154 59 38 / 0.1);
+  --bg: #fbfbfc;
+  --ink: #15171c;
+  --muted: #5f6672;
+  --rule: #dde0e6;
+  --accent: #1d3f8f;
+  --wash: rgb(29 63 143 / 0.1);
   --serif: 'Lora Variable', 'Lora', Georgia, 'Times New Roman', serif;
   --rail: 13.5rem;
   --gap: clamp(2rem, 5vw, 4.5rem);
@@ -16,12 +16,12 @@
 
 /* Light is the default. Dark is opt-in through the toggle (see main.js). */
 :root[data-theme='dark'] {
-  --bg: #161513;
-  --ink: #e9e5db;
-  --muted: #a39d90;
-  --rule: #38352f;
-  --accent: #e39274;
-  --wash: rgb(227 146 116 / 0.14);
+  --bg: #0f1115;
+  --ink: #e9ebef;
+  --muted: #a0a7b3;
+  --rule: #2b2f38;
+  --accent: #8eaaf2;
+  --wash: rgb(142 170 242 / 0.14);
   color-scheme: dark;
 }
 

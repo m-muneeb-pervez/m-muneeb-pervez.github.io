@@ -31,8 +31,8 @@ def make_theme(bg, ink, gray, line, soft, accent, tint_amount):
 
 
 THEMES = {
-    "light": make_theme("#f7f4ed", "#1c1b19", "#6a655b", "#3a3834", "#cdc6b4", "#9a3b26", 0.13),
-    "dark": make_theme("#161513", "#e9e5db", "#a39d90", "#cfc9bb", "#4b473f", "#e39274", 0.20),
+    "light": make_theme("#fbfbfc", "#15171c", "#5f6672", "#33373f", "#cdd1d8", "#1d3f8f", 0.13),
+    "dark": make_theme("#0f1115", "#e9ebef", "#a0a7b3", "#c8cdd6", "#444955", "#8eaaf2", 0.20),
 }
 
 
