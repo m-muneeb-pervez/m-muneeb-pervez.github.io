@@ -272,9 +272,9 @@ def safemas(name, theme, t):
     # ---- bottom: what it finds
     s.p.append(f'<path d="M6,234 H{W - 6}" stroke="{soft}" stroke-width="1.2"/>')
     for x0, big, color, lines in [
-        (6, "76%", acc, ["of runs: a tampered", "message succeeds"]),
-        (176, "39 to 40%", ink, ["on orchestrated teams,", "vs 41% for one agent,", "same attacks"]),
-        (346, "42 to 49%", ink, ["of the task done by", "orchestrated teams, vs", "90% for one agent"]),
+        (6, "82%", acc, ["of runs: a tampered", "orchestrator message", "succeeds"]),
+        (176, "53%", ink, ["on orchestrated teams,", "vs 48% for one agent,", "same attacks"]),
+        (346, "38 to 44%", ink, ["of the task done by", "orchestrated teams, vs", "88% for one agent"]),
     ]:
         s.text(x0, 270, big, 28, 700, color, "start")
         for i, line in enumerate(lines):

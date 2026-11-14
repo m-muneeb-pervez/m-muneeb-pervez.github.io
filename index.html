@@ -73,7 +73,7 @@
             <li>
               <strong>Measurements:</strong> apps <a class="cite" href="#pub-1">[1]</a>, videos
               <a class="cite" href="#pub-2">[2]</a>, agents <a class="cite" href="#pub-3">[3]</a>,
-              <a href="#ai-overviews">AI Overviews</a>, and <a href="#amiclaw">AmiClaw</a>
+              and <a href="#ai-overviews">AI Overviews</a>
             </li>
             <li><strong>Systems security:</strong> software vulnerabilities and defenses against them</li>
           </ul>
@@ -129,6 +129,8 @@
               </p>
               <p class="links">
                 <a href="https://doi.org/10.1145/3774904.3792969" target="_blank" rel="noopener">doi:10.1145/3774904.3792969</a>
+                &middot;
+                <a href="papers/webconf-2026-informed-consent.pdf" target="_blank" rel="noopener">PDF</a>
               </p>
               <details class="details">
                 <summary>Details</summary>
@@ -182,6 +184,8 @@
               </p>
               <p class="links">
                 <a href="https://arxiv.org/abs/2607.23739" target="_blank" rel="noopener">arXiv:2607.23739</a>
+                &middot;
+                <a href="papers/icwsm-2027-separating-clicks-from-baits.pdf" target="_blank" rel="noopener">PDF</a>
               </p>
               <details class="details">
                 <summary>Details</summary>
@@ -228,20 +232,26 @@
                 Ilies Benhabbour, <strong>Muhammad Muneeb Pervez</strong>, Zafar Ayyub Qazi, Marco Canini
               </p>
               <p class="framework">
-                Introduces safeMAS, a framework for measuring how safe multi-agent LLM systems are against attacks
+                Introduces safeMAS, a framework for measuring whether splitting tools across a team of LLM agents
+                limits the damage of attacks
               </p>
               <p class="finding">
                 <span class="label">Key finding</span>Splitting tools across an orchestrated team does not make it
-                safer. A tampered message between agents succeeds in 76% of runs, more than any other attack vector.
+                safer. A tampered message from the orchestrator succeeds in 82% of runs, more than any other attack
+                vector.
               </p>
               <details class="details">
                 <summary>Details</summary>
                 <ul>
-                  <li>A measurement framework with 990 scenarios across 4 simulated domains and 240 tools, run on three models</li>
+                  <li>1,110 scenarios across 4 simulated domains and 240 tools, run on three models (16,056 runs)</li>
                   <li>
-                    With attacks on the channels between agents included, 53% of attacks on orchestrated teams succeed
+                    With attacks on the orchestrator and on messages between agents included, 62% of attacks on
+                    orchestrated teams succeed, against 48% on a single agent
                   </li>
-                  <li>Orchestrated teams make 16 to 60 times as many model calls as a single agent</li>
+                  <li>
+                    Orchestrated teams complete 38 to 44% of the task against 88% for a single agent, with 22 to 62
+                    times as many model calls
+                  </li>
                 </ul>
                 <figure class="figure native">
                   <div class="fig-scroll">
@@ -251,7 +261,7 @@
                         width="720"
                         height="340"
                         loading="lazy"
-                        alt="Overview of safeMAS in four parts. Same tasks, five team structures: a single agent and centralized, decentralized, hybrid, and independent teams. In a team the tools are split, so no agent can finish alone. One payload is planted by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Findings: a tampered message succeeds in 76 percent of runs, attacks on orchestrated teams succeed in 39 to 40 percent against 41 percent for one agent on the same attacks, and orchestrated teams complete 42 to 49 percent of the task against 90 percent for one agent. Attack success and task completion come from the final state, with no language model as judge."
+                        alt="Overview of safeMAS in four parts. Same tasks, five team structures: a single agent and centralized, decentralized, hybrid, and independent teams. In a team the tools are split, so no agent can finish alone. One payload is planted by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Findings: a tampered message from the orchestrator succeeds in 82 percent of runs, attacks on orchestrated teams succeed in 53 percent against 48 percent for one agent on the same attacks, and orchestrated teams complete 38 to 44 percent of the task against 88 percent for one agent. Attack success and task completion come from the final state, with no language model as judge."
                       />
                     </a>
                     <a class="dark" href="safemas-overview-dark.svg" target="_blank" rel="noopener">
@@ -260,7 +270,7 @@
                         width="720"
                         height="340"
                         loading="lazy"
-                        alt="Overview of safeMAS in four parts. Same tasks, five team structures: a single agent and centralized, decentralized, hybrid, and independent teams. In a team the tools are split, so no agent can finish alone. One payload is planted by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Findings: a tampered message succeeds in 76 percent of runs, attacks on orchestrated teams succeed in 39 to 40 percent against 41 percent for one agent on the same attacks, and orchestrated teams complete 42 to 49 percent of the task against 90 percent for one agent. Attack success and task completion come from the final state, with no language model as judge."
+                        alt="Overview of safeMAS in four parts. Same tasks, five team structures: a single agent and centralized, decentralized, hybrid, and independent teams. In a team the tools are split, so no agent can finish alone. One payload is planted by instruction injection, tool poisoning, or message tampering. The relay agent writes the payload into a record, and the target agent reads it and makes the harmful write. Findings: a tampered message from the orchestrator succeeds in 82 percent of runs, attacks on orchestrated teams succeed in 53 percent against 48 percent for one agent on the same attacks, and orchestrated teams complete 38 to 44 percent of the task against 88 percent for one agent. Attack success and task completion come from the final state, with no language model as judge."
                       />
                     </a>
                   </div>
@@ -316,7 +326,7 @@
             </p>
             <ul>
               <li>
-                Co-developed safeMAS, a framework for testing multi-agent LLM systems
+                Co-developed safeMAS, a framework for measuring attacks on tool-partitioned multi-agent LLM systems
                 <a class="cite" href="#pub-3">[3]</a>, under review at ICLR 2027
               </li>
               <li>Extending it to internal threats: an agent causing harm with no outside attacker</li>
@@ -325,8 +335,9 @@
                 2027
               </li>
               <li id="ai-overviews">
-                Measuring the impact of Google&rsquo;s AI Overviews on ad revenue, an internet measurement study
-                planned for submission to IMC 2027
+                Measuring how Google&rsquo;s AI Overviews divide the results page between advertisers and publishers,
+                across 10,068 queries on desktop and mobile. Early results show ads inside about one in ten AI
+                Overviews. Planned for submission to IMC 2027
               </li>
             </ul>
           </article>
@@ -345,10 +356,6 @@
               <li>
                 Co-authored the predatory apps study <a class="cite" href="#pub-1">[1]</a>, accepted at The Web
                 Conference 2026
-              </li>
-              <li id="amiclaw">
-                With <a class="person" href="https://yasirzaki.net" target="_blank" rel="noopener">Dr Yasir Zaki</a> (NYU Abu Dhabi), building AmiClaw, an OpenClaw-based framework that automates
-                internet measurements. Planned for IMC 2027
               </li>
             </ul>
           </article>
