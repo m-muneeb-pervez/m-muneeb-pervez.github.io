@@ -42,17 +42,18 @@
 <text x="366" y="199" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">a record. The target agent reads it and</text>
 <text x="366" y="218" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">makes the harmful write.</text>
 <path d="M6,234 H714" stroke="#444955" stroke-width="1.2"/>
-<text x="6" y="270" font-size="28" font-weight="700" fill="#8eaaf2" text-anchor="start">76%</text>
+<text x="6" y="270" font-size="28" font-weight="700" fill="#8eaaf2" text-anchor="start">82%</text>
 <text x="6" y="292" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">of runs: a tampered</text>
-<text x="6" y="311" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">message succeeds</text>
-<text x="176" y="270" font-size="28" font-weight="700" fill="#e9ebef" text-anchor="start">39 to 40%</text>
+<text x="6" y="311" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">orchestrator message</text>
+<text x="6" y="330" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">succeeds</text>
+<text x="176" y="270" font-size="28" font-weight="700" fill="#e9ebef" text-anchor="start">53%</text>
 <text x="176" y="292" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">on orchestrated teams,</text>
-<text x="176" y="311" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">vs 41% for one agent,</text>
+<text x="176" y="311" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">vs 48% for one agent,</text>
 <text x="176" y="330" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">same attacks</text>
-<text x="346" y="270" font-size="28" font-weight="700" fill="#e9ebef" text-anchor="start">42 to 49%</text>
+<text x="346" y="270" font-size="28" font-weight="700" fill="#e9ebef" text-anchor="start">38 to 44%</text>
 <text x="346" y="292" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">of the task done by</text>
 <text x="346" y="311" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">orchestrated teams, vs</text>
-<text x="346" y="330" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">90% for one agent</text>
+<text x="346" y="330" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">88% for one agent</text>
 <text x="526" y="262" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">Attack success and task</text>
 <text x="526" y="281" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">completion come from the</text>
 <text x="526" y="300" font-size="14.5" font-weight="400" fill="#a0a7b3" text-anchor="start">final state, with no</text>
