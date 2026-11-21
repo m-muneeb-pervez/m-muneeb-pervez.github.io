@@ -9,6 +9,7 @@ two with the dark-mode toggle (see .figure in src/style.css).
   www-overview      the Web Conference study as one picture, at display size
   icwsm-pipeline    the ICWSM detection pipeline (a few words per box, one accent color)
   safemas-overview  the whole safeMAS paper as one picture, at display size
+  aio-overview      the IMC AI Overviews paper: queries, four renderings, findings
 
 The palette below mirrors the CSS variables in src/style.css. If the site colors
 change, change them here too and run this script again.
@@ -404,8 +405,154 @@ def www(name, theme, t):
     s.save(f"public/{name}-{theme}.svg")
 
 
+def aio(name, theme, t):
+    """The IMC AI Overviews paper as a picture: what was searched, the four renderings of each
+    results page (drawn as mini pages), and the main findings. 720 wide, all text at least 14 px."""
+    W, H = 720, 350
+    s = Svg(W, H, t)
+    ink, gray, acc, soft, line, bg, tint = t["ink"], t["gray"], t["accent"], t["soft"], t["line"], t["bg"], t["tint"]
+    adfill = mix(bg, gray, 0.75)
+
+    def g(x, y, inner, k=1.0, stroke=None, sw=1.6, fill="none"):
+        s.p.append(f'<g transform="translate({x},{y}) scale({k})" fill="{fill}" stroke="{stroke or line}" '
+                   f'stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round">{inner}</g>')
+
+    def rect(x, y, w, h, fill, stroke="none", sw=0, r=2.5, dash=None):
+        d = f' stroke-dasharray="{dash}"' if dash else ""
+        s.p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"{d}/>')
+
+    def spark(cx, cy, r, color):
+        k = r * 0.28
+        s.p.append(f'<path d="M{cx},{cy - r} Q{cx + k},{cy - k} {cx + r},{cy} Q{cx + k},{cy + k} {cx},{cy + r} '
+                   f'Q{cx - k},{cy + k} {cx - r},{cy} Q{cx - k},{cy - k} {cx},{cy - r} Z" fill="{color}"/>')
+
+    for x in (180, 540):
+        s.p.append(f'<path d="M{x},10 V{H - 10}" stroke="{soft}" stroke-width="1.2"/>')
+
+    # ---- 1. searched
+    c = 6
+    s.text(c, 26, "Searched", 17, 700, anchor="start")
+    rect(c, 40, 162, 30, bg, line, 1.6, 15)
+    g(c + 11, 47, '<circle cx="6.5" cy="6.5" r="5.5"/><path d="M10.5,10.5 L15,15"/>', 1.0)
+    s.text(c + 34, 60, "3d night light", 14, 400, gray, "start")
+    s.text(c, 96, "10,068 queries", 14.5, 700, anchor="start")
+    s.text(c, 115, "factual to commercial", 14, 400, gray, "start")
+    g(c + 2, 134, '<rect x="1" y="1" width="46" height="31" rx="3"/><path d="M17,42 H31 M24,32 V42"/>', 1.0)
+    g(c + 60, 132, '<rect x="1" y="1" width="22" height="40" rx="4"/><path d="M9,6 H15"/>', 1.0)
+    s.text(c, 198, "Desktop and mobile", 14.5, 700, anchor="start")
+    s.text(c, 217, "real Chrome, logged out", 14, 400, gray, "start")
+    HOUSE = '<path d="M2,14 L14,3 L26,14"/><path d="M5,11 V27 H23 V11"/><path d="M11,27 V19 H17 V27"/>'
+    for i in range(4):
+        g(c + 2 + i * 34, 234, HOUSE, 1.0, acc if i == 0 else line)
+    s.text(c, 286, "130 home networks", 14.5, 700, anchor="start")
+    s.text(c, 305, "in the US", 14, 400, gray, "start")
+
+    # ---- 2. rendered: the same results page four ways, drawn as mini pages
+    s.text(186, 26, "Rendered each page four ways", 17, 700, anchor="start")
+    PW, PH, PY, GAP = 72, 222, 40, 20
+    FS = PY + 115          # bottom of the first screen
+    IX, IW = 7, 58         # inner margin and width
+
+    def ad(x, y, h=18):
+        rect(x + IX, y, IW, h, adfill)
+        s.text(x + IX + IW / 2, y + h / 2 + 5, "Ad", 14, 700, bg)
+        return y + h + 6
+
+    def org(x, y):
+        rect(x + IX, y + 2, IW * 0.72, 4, line, r=2)
+        rect(x + IX, y + 10, IW, 3, soft, r=1.5)
+        rect(x + IX, y + 17, IW * 0.82, 3, soft, r=1.5)
+        return y + 28
+
+    def feat(x, y):
+        rect(x + IX, y, IW, 30, tint, soft, 1.2, 3)
+        g(x + IX + 22, y + 5, '<path d="M7,20 C4,15.5 3,13.5 3,11.5 A4,4 0 0 1 11,11.5 C11,13.5 10,15.5 7,20 Z"/>', 1.0, gray, 1.4)
+        return y + 36
+
+    def aiobox(x, y, h, inner_ad=False):
+        rect(x + IX, y, IW, h, tint, acc, 1.6, 4)
+        spark(x + IX + 9, y + 10, 5.5, acc)
+        for j in range((h - 26) // 10 + 1):
+            yy = y + 22 + j * 10
+            if inner_ad and yy > y + h - 46:
+                break
+            rect(x + IX + 6, yy, (IW - 12) * (0.62 if j % 3 == 2 else 1), 3, soft, r=1.5)
+        if inner_ad:
+            yy = y + h - 30
+            rect(x + IX + 5, yy, IW - 10, 22, adfill, acc, 1.8, 3)
+            s.text(x + IX + IW / 2, yy + 16, "Ad", 14, 700, bg)
+        return y + h + 6
+
+    pages = [("Served", ["ad", ("aio", 64), "org", "feat", "org"]),
+             ("No AIO", ["ad", "org", "org", "feat", "org", "org", "org"]),
+             ("Expanded", ["ad", ("aio", 140, True), "org"]),
+             ("Web mode", ["ad", "org", "org", "org", "org", "org", "org"])]
+    for i, (label, items) in enumerate(pages):
+        x = 186 + i * (PW + GAP)
+        s.p.append(f'<clipPath id="pg{i}"><rect x="{x}" y="{PY}" width="{PW}" height="{PH}" rx="6"/></clipPath>')
+        rect(x, PY, PW, PH, bg, soft, 1.4, 6)
+        s.p.append(f'<g clip-path="url(#pg{i})">')
+        rect(x + IX, PY + 7, IW, 10, bg, soft, 1.2, 5)
+        y = PY + 24
+        for it in items:
+            if it == "ad":
+                y = ad(x, y)
+            elif it == "org":
+                y = org(x, y)
+            elif it == "feat":
+                y = feat(x, y)
+            else:
+                y = aiobox(x, y, it[1], len(it) > 2)
+        s.p.append('</g>')
+        rect(x, PY, PW, PH, "none", line, 1.6, 6)
+        s.text(x + PW / 2, PY + PH + 22, label, 14, 700)
+    s.p.append(f'<path d="M180,{FS} H540" stroke="{acc}" stroke-width="1.6" stroke-dasharray="5 4"/>')
+
+    # legend
+    ly = 312
+    lx = 186
+    for kind, label in [("ad", "Ad"), ("aio", "AI Overview"), ("org", "Organic"), ("feat", "Feature")]:
+        if kind == "ad":
+            rect(lx, ly - 11, 14, 12, adfill)
+        elif kind == "aio":
+            rect(lx, ly - 11, 14, 12, tint, acc, 1.4)
+        elif kind == "org":
+            rect(lx, ly - 9, 14, 3.5, line, r=1.5)
+            rect(lx, ly - 3, 14, 3, soft, r=1.5)
+        else:
+            rect(lx, ly - 11, 14, 12, tint, soft, 1.2)
+        s.text(lx + 20, ly, label, 14, 400, gray, "start")
+        lx += 20 + {"ad": 18, "aio": 78, "org": 52, "feat": 50}[kind] + 16
+    s.p.append(f'<path d="M186,{ly + 17} H206" stroke="{acc}" stroke-width="1.6" stroke-dasharray="5 4"/>')
+    s.text(212, ly + 22, "End of the first screen", 14, 400, gray, "start")
+
+    # ---- 3. found
+    c = 546
+    s.text(c, 26, "Found", 17, 700, anchor="start")
+    s.p.append(f'<text x="{c}" y="62" font-size="14.5"><tspan font-weight="700" font-size="22" fill="{acc}">87%</tspan>'
+               f'<tspan fill="{gray}"> of queries</tspan></text>')
+    s.text(c, 81, "showed an AI Overview", 14.5, 400, gray, "start")
+    for i in range(10):
+        x = c + 1 + i * 16.6
+        rect(x, 98, 13, 13, acc if i == 0 else tint, acc if i == 0 else soft, 1.2, 3)
+    s.p.append(f'<text x="{c}" y="134" font-size="14.5"><tspan font-weight="700" fill="{acc}">1 in 10</tspan>'
+               f'<tspan fill="{gray}"> carried an ad,</tspan></text>')
+    s.text(c, 153, "under 1% of them on", 14.5, 400, gray, "start")
+    s.text(c, 172, "the first screen", 14.5, 400, gray, "start")
+    s.text(c, 206, "First-screen area lost", 14.5, 700, anchor="start")
+    s.text(c, 225, "to the AIO, desktop", 14, 400, gray, "start")
+    for j, (lab, v, col) in enumerate([("Organic", 74, acc), ("Ads", 44, adfill)]):
+        y = 242 + j * 30
+        s.text(c, y + 14, lab, 14, 700 if j == 0 else 400, ink if j == 0 else gray, "start")
+        rect(c + 60, y + 1, 64 * v / 74, 18, col, r=3)
+        s.text(c + 60 + 64 * v / 74 + 6, y + 15, f"{v}%", 14, 700, acc if j == 0 else gray, "start")
+    s.text(c, 322, "Publishers lose most", 14.5, 700, acc, "start")
+    s.save(f"public/{name}-{theme}.svg")
+
+
 if __name__ == "__main__":
     for theme, t in THEMES.items():
         clickbait("icwsm-pipeline", t)
         www("www-overview", theme, t)
         safemas("safemas-overview", theme, t)
+        aio("aio-overview", theme, t)
